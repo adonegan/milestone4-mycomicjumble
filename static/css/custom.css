@@ -37,3 +37,9 @@ i.fa-lg {
 p.card-text {
   justify-content: center;
 }
+
+.page-titles {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
