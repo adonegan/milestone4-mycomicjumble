@@ -8,3 +8,8 @@ class TestViews(TestCase):
         page = self.client.get("/")
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "index.html")
+
+    def test_about_is_rendered(self):
+        page = self.client.get("/about/")
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, "about.html")
