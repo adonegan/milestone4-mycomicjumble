@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for comic in comics %}
+
+<div class="card">
+    <div class="card-body">
+
+        {% if comic.image %}
+        <img class="img-comic" src="/media/{{ comic.image }}">
+        {% endif %}
+
+        <h3>{{ comic.name }}</h3>
+        <p>{{ comic.description }}</p>
+        <p>{{ comic.price }}</p>
+        <p>{{ comic.grade }}</p>
+
+    </div>
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}
