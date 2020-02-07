@@ -1,24 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-{% for comic in comics %}
-
-<div class="card">
-    <div class="card-body">
-
-        {% if comic.image %}
-        <img class="img-comic" src="/media/{{ comic.image }}">
-        {% endif %}
-
-        <h3>{{ comic.name }}</h3>
-        <p>{{ comic.description }}</p>
-        <p>{{ comic.price }}</p>
-        <p>{{ comic.grade }}</p>
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="page-titles"> Comics </h1>
+        </div>
     </div>
-</div>
 
-{% endfor %}
+    <div class="row">
+
+        {% for comic in comics %}
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body mx-auto">
+
+                    {% if comic.image %}
+                    <img class="card-img-top" src="/media/{{ comic.image }}">
+                    {% endif %}
+
+                    <h5>{{ comic.name }}</h5>
+                    <p>€{{ comic.price }}</p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <h2>ENDS</h2>
 </div>
 {% endblock %}

@@ -26,8 +26,8 @@ from comics.views import all_comics
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
-    url(r'^about/', about_view),
-    url(r'^comics/', include(urls_comics)),
+    url(r'^$', index, name='index'),
+    url(r'^about/', about_view, name='about'),
+    url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
