@@ -34,12 +34,11 @@
                     <a class="nav-link" href="{% url 'comics' %}"><i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
                         Comics</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'search' %}"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-question fa-lg" aria-hidden="true"></i>
-                        FAQ</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>
                         Register</a>
@@ -51,6 +50,7 @@
             </ul>
         </div>
     </nav>
+
 
         {% block content %} {% endblock %}
 
