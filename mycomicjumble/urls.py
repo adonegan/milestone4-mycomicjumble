@@ -22,6 +22,8 @@ from home import urls as urls_home
 from home.views import index, about_view
 from comics import urls as urls_comics
 from comics.views import all_comics
+from search import urls as urls_search
+from search.views import do_search
 
 
 urlpatterns = [
@@ -29,5 +31,6 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^about/', about_view, name='about'),
     url(r'^comics/', include(urls_comics), name='comics'),
+    url(r'^search/', include(urls_search), name='search'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
