@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>Search</h1>
+    <h1 class="card-text">Search</h1>
     <div class="row">
         <div class="col">
             <form method="GET">
@@ -24,8 +24,8 @@
                     <img class="card-img-top" src="/media/{{ comic.image }}">
                     {% endif %}
 
-                    <h5>{{ comic.name }}</h5>
-                    <p>€{{ comic.price }}</p>
+                    <h5 class="card-text text-center">{{ comic.name }}</h5>
+                    <p class="card-text text-center">€{{ comic.price }}</p>
                 </div>
             </div>
         </div>

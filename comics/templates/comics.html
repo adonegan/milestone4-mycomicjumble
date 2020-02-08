@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="page-titles"> Comics </h1>
+            <h1 class="card-text"> Comics </h1>
         </div>
     </div>
 
@@ -20,8 +20,8 @@
                     <img class="card-img-top" src="/media/{{ comic.image }}">
                     {% endif %}
 
-                    <h5>{{ comic.name }}</h5>
-                    <p>€{{ comic.price }}</p>
+                    <h5 class="card-text text-center">{{ comic.name }}</h5>
+                    <p class="card-text text-center">€{{ comic.price }}</p>
                 </div>
             </div>
         </div>
