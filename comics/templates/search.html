@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Search</h1>
+    <div class="row">
+        <div class="col">
+            <form method="GET">
+                <div class="input-field">
+                    <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search Here...">
+                    <button class="btn" type="submit" name="action">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for comic in comics %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body mx-auto">
+
+                    {% if comic.image %}
+                    <img class="card-img-top" src="/media/{{ comic.image }}">
+                    {% endif %}
+
+                    <h5>{{ comic.name }}</h5>
+                    <p>€{{ comic.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
