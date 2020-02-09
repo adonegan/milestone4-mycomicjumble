@@ -10,6 +10,9 @@ class Comic(models.Model):
     grade = models.CharField(max_length=20)
     penciler = models.CharField(max_length=50)
     cover_artist = models.CharField(max_length=50)
+    brand = models.CharField(max_length=30, blank=True, null=True)
+    writer = models.CharField(max_length=30, blank=True, null=True)
+    published_date = models.DateField(blank=True, null=True, auto_now=False)
 
     def __str__(self):
         return self.name
