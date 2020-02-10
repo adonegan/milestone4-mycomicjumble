@@ -17,7 +17,9 @@
                 <div class="card-body mx-auto">
 
                     {% if comic.image %}
-                    <img class="card-img-top" src="/media/{{ comic.image }}">
+                    <a href="{% url 'detail' comic.id %}">
+                        <img class="card-img-top" src="/media/{{ comic.image }}">
+                    </a>
                     {% endif %}
 
                     <h5 class="card-text text-center">{{ comic.name }}</h5>
@@ -29,6 +31,5 @@
         {% endfor %}
     </div>
 
-    <h2>ENDS</h2>
 </div>
 {% endblock %}
