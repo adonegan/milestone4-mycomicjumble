@@ -32,6 +32,6 @@ urlpatterns = [
     url(r'^about/', about_view, name='about'),
     url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^search/', include(urls_search), name='search'),
-    url(r'^comics/details-item(?P<comic_id>[0-12]+)', detail, name='detail'),
+    url(r'^comics/(?P<comic_id>[0-12]+)', detail, name='detail'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
