@@ -9,22 +9,22 @@
     <div class="row">
 
         <div class="col-lg-8">
-
-
             <h4 class="card-text"> {{ comic.name }}</h4>
             <h6 class="card-text"> €{{ comic.price }}</h6>
             <hr>
-                <h6 class="card-text"> <b>Published Date:</b> {{ comic.published_date }}</h6>
-                <h6 class="card-text"> <b>Writer:</b> {{ comic.writer }}</h6>
-                <h6 class="card-text"> <b>Penciler:</b> {{ comic.penciler }}</h6>
-                <h6 class="card-text"> <b>Cover Artist:</b> {{ comic.cover_artist }}</h6>
+            <h6 class="card-text"> <b>Published Date:</b> {{ comic.published_date }}</h6>
+            <h6 class="card-text"> <b>Writer:</b> {{ comic.writer }}</h6>
+            <h6 class="card-text"> <b>Penciler:</b> {{ comic.penciler }}</h6>
+            <h6 class="card-text"> <b>Cover Artist:</b> {{ comic.cover_artist }}</h6>
             <hr>
-                <h6 class="card-text"> <b>Description</b><br><br><p> {{ comic.description }}</p></h6>
+            <h6 class="card-text"> <b>Description</b><br><br>
+                <p> {{ comic.description }}</p>
+            </h6>
             <hr>
-                <h6 class="card-text"> <b>Condition:</b> {{ comic.condition }}</h6>
-                <h6 class="card-text"> <b>Grade:</b> {{ comic.grade }}</h6>
-                <h6 class="card-text"> <b>Publisher:</b> {{ comic.brand }}</h6>
-
+            <h6 class="card-text"> <b>Condition:</b> {{ comic.condition }}</h6>
+            <h6 class="card-text"> <b>Grade:</b> {{ comic.grade }}</h6>
+            <h6 class="card-text"> <b>Publisher:</b> {{ comic.brand }}</h6>
+            <br>
         </div>
 
         <div class="col-lg-4">
@@ -32,6 +32,9 @@
             {% if comic.image %}
             <img class="img-fluid" src="/media/{{ comic.image }}">
             {% endif %}
+
+            <br>
+            <br>
         </div>
 
     </div>
