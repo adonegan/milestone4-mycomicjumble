@@ -45,7 +45,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'view_cart' comic.id %}"><i class="fa fa-shopping-cart"></i> Cart</a>
+                    <a class="nav-link" href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
                     {% if comic_count > 0 %}
                         <label class="badge badge-warning">{{ comic_count }}</label>
                         {% endif %}
