@@ -40,7 +40,29 @@
         </div>
 
         {% endfor %}
-    </div>
 
+        {% for comic in comics %}
+
+
+        {% endfor %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if comics.has_previous %}
+                        <a href="?page={{ comics.previous_page_number }}">Previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ comics.number }} of {{ comics.paginator.num_pages }}
+                </span>
+
+                {% if comics.has_next %}
+                <a href="?page={{ comics.next_page_number }}">Next</a>
+                {% endif %}
+            </span>
+        </div>
+
+
+
+    </div>
 </div>
 {% endblock %}
