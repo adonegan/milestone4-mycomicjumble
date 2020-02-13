@@ -37,6 +37,23 @@
             <br>
         </div>
 
+        <form method="post" action="{% url 'add_to_cart' comic.id %}">
+            {% csrf_token %}
+            <div class="input-group card-text text-center">
+                <span class="input-group-btn mx-auto">
+                    <button class="btn btn-danger" type="submit">Add to Cart</button>
+                </span>
+            </div>
+        </form>
+
+        <form method="post" action="{% url 'comics' %}">
+            {% csrf_token %}
+            <div class="input-group card-text text-center">
+                <span class="input-group-btn mx-auto">
+                    <button class="btn btn-danger" type="submit">Back to Comics</button>
+                </span>
+            </div>
+        </form>
     </div>
 </div>
 
