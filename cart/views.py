@@ -9,8 +9,7 @@ def add_to_cart(request, id):
     quantity = 1
 
     cart = request.session.get('cart', {})
-    if id in cart:
-        cart[id] = int(cart[id])
+    cart[id] = cart.get(id, quantity)
 
     request.session['cart'] = cart
     return redirect(reverse('index'))
