@@ -8,7 +8,8 @@ def do_search(request):
     query = request.GET.get('q')
     if query:
         comics_list = Comic.objects.filter(
-            Q(name__icontains=query) | Q(grade__icontains=query)
+            Q(name__icontains=query) | Q(grade__icontains=query) |
+            Q(brand__icontains=query)
         ).distinct()
 
     context = {
