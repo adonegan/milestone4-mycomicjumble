@@ -3,37 +3,37 @@
 
 {% block content %}
 
-<div class="row">
+<div class="container">
+    <div class="row">
 
-    {% for item in cart_items %}
+        {% for item in cart_items %}
 
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <div class="card-body mx-auto">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body mx-auto">
 
-                {% if comic.image %}
-                <a href="{% url 'detail' comic.id %}">
-                    <img class="card-img-top" src="/media/{{ item.comic.image }}">
-                </a>
-                {% endif %}
+                    {% if comic.image %}
+                    <a href="{% url 'detail' comic.id %}">
+                        <img class="card-img-top" src="/media/{{ item.comic.image }}">
+                    </a>
+                    {% endif %}
 
-                <h5 class="card-text text-center">{{ item.comic.name }}</h5>
-                <p class="card-text text-center">{{ item.comic.description }}</p>
-                <p class="card-text text-center">€{{ item.comic.price }}</p>
+                    <h5 class="card-text text-center">{{ item.comic.name }}</h5>
+                    <p class="card-text text-center">€{{ item.comic.price }}</p>
 
-
-
+                </div>
             </div>
+
         </div>
-        {% endfor %}
+            {% endfor %}
+
+    </div>
+
+    <div class="row">
+        <p>Total</p>
+        <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+        <a href="/" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign"
+                aria-hidden="true"></span>Checkout</a>
     </div>
 </div>
-
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="/" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign"
-            aria-hidden="true"></span>Checkout</a>
-</div>
-
 {% endblock %}
