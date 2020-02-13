@@ -5,7 +5,7 @@ def view_cart(request):
     return render(request, "cart.html")
 
 
-def add_to_cart(request, comic_id):
+def add_to_cart(request, id):
     quantity = 1
 
     cart = request.session.get('cart', {})
