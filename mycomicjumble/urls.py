@@ -24,6 +24,8 @@ from comics import urls as urls_comics
 from comics.views import all_comics, detail
 from search import urls as urls_search
 from search.views import do_search
+from cart import urls as urls_cart
+from cart.views import view_cart, add_to_cart
 
 
 urlpatterns = [
@@ -32,6 +34,7 @@ urlpatterns = [
     url(r'^about/', about_view, name='about'),
     url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^search/', include(urls_search), name='search'),
+    url(r'^cart/', include(urls_cart)),
     url(r'^comics/(?P<comic_id>[0-12]+)', detail, name='detail'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
