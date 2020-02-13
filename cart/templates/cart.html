@@ -12,14 +12,21 @@
             <div class="card">
                 <div class="card-body mx-auto">
 
-                    {% if comic.image %}
-                    <a href="{% url 'detail' comic.id %}">
+                    {% if item.comic.image %}
                         <img class="card-img-top" src="/media/{{ item.comic.image }}">
-                    </a>
                     {% endif %}
 
                     <h5 class="card-text text-center">{{ item.comic.name }}</h5>
                     <p class="card-text text-center">€{{ item.comic.price }}</p>
+
+                    <form method="post" action="{% url 'remove_from_cart' item.id %}">
+                        {% csrf_token %}
+                        <div class="input-group card-text text-center">
+                            <span class="input-group-btn mx-auto">
+                                <button class="btn btn-danger" type="submit">Remove</button>
+                            </span>
+                        </div>
+                    </form>
 
                 </div>
             </div>
