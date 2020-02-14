@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import auth, messages
 
-# Create your views here.
+
+def logout(request):
+    auth.logout(request)
+    messages.success(request, "You are now logged out.")
+    return redirect(reverse('index'))
