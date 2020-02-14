@@ -24,18 +24,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a>
+                    <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home fa-lg"
+                            aria-hidden="true"></i>Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}"><i class="fa fa-cloud fa-lg" aria-hidden="true"></i>
                         About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'comics' %}"><i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
+                    <a class="nav-link" href="{% url 'comics' %}"><i class="fa fa-shopping-bag fa-lg"
+                            aria-hidden="true"></i>
                         Comics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'search' %}"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="{% url 'search' %}"><i class="fa fa-search fa-lg"
+                            aria-hidden="true"></i></a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto">
@@ -45,8 +48,8 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 {% if comic_count > 0 %}
-                        <label class="badge badge-success mx-auto my-auto">{{ comic_count }}</label>
-                        {% endif %}
+                <label class="badge badge-success mx-auto my-auto">{{ comic_count }}</label>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
                 </li>
@@ -58,12 +61,25 @@
                     <a class="nav-link" href="#"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
                         Login</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                        Logout</a>
+                </li>
             </ul>
         </div>
     </nav>
 
+    <div class="container">
+        {% if messages %}
+        <div>
+            {% for message in messages %} {{ message }} {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 
-        {% block content %} {% endblock %}
+
+
+    {% block content %} {% endblock %}
 
     <div id="footer" class="bg-dark">
         <p>Hello, World!</p>
