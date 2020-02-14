@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from accounts.forms import LoginForm
 
 
+@login_required
 def logout(request):
     auth.logout(request)
     messages.success(request, "You are now logged out.")
@@ -10,16 +12,19 @@ def logout(request):
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect(reverse('index'))
     if request.method == "POST":
         login_form = LoginForm(request.POST)
 
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
+            messages.success(request, "You are now logged in!")
 
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You are now logged in!")
+                return redirect(reverse('index'))
             else:
                 login_form.add_error(None, "Your username or password is not right")
     else:
