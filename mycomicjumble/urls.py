@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^search/', include(urls_search), name='search'),
     url(r'^cart/', include(urls_cart)),
-    url(r'^comics/(?P<comic_id>[0-12]+)', detail, name='detail'),
+    url(r'^comics/details/(?P<comic_id>[0-12]+)', detail, name='detail'),
     url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^accounts/login/$', login, name="login"),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
