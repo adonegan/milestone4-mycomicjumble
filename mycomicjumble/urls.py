@@ -26,7 +26,7 @@ from search import urls as urls_search
 from search.views import do_search
 from cart import urls as urls_cart
 from cart.views import view_cart, add_to_cart
-from accounts.views import logout, login
+from accounts.views import logout, login, register
 
 
 urlpatterns = [
@@ -39,5 +39,6 @@ urlpatterns = [
     url(r'^comics/details/(?P<comic_id>[0-12]+)', detail, name='detail'),
     url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^accounts/login/$', login, name="login"),
+    url(r'^accounts/register/$', register, name="register"),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
