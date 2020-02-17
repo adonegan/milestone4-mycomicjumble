@@ -9,6 +9,7 @@ body {
   font-weight: 500;
 }
 
+.navbar-brand,
 .display-4,
 .lead,
 .card-text {
@@ -20,10 +21,6 @@ body {
   height: 200px;
   border-top: 1px solid #ededed;
   color: #A9A9A9;
-}
-
-.jumbotron {
-  margin-top: 30px;
 }
 
 .card {
@@ -59,3 +56,24 @@ p.card-text {
   align-items: center;
 }
 
+.form-group {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  border: solid 2px black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.helptext {
+  font-size: 10px;
+}
+
+.end-site{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  padding: 20px;
+}
