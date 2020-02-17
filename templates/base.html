@@ -16,6 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'index' %}">Jumble</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,26 +25,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home fa-lg"
-                            aria-hidden="true"></i>Home</a>
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}"><i class="fa fa-cloud fa-lg" aria-hidden="true"></i>
-                        About</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'comics' %}"><i class="fa fa-shopping-bag fa-lg"
-                            aria-hidden="true"></i>
-                        Comics</a>
+                    <a class="nav-link" href="{% url 'comics' %}">Comics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'search' %}"><i class="fa fa-search fa-lg"
-                            aria-hidden="true"></i></a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">My Comic Jumble</a>
+                    <a class="nav-link" href="{% url 'search' %}">Search</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -61,23 +52,25 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>
-                        Register</a>
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
-                        Login</a>
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>
         </div>
     </nav>
 
-    <div class="container">
+
+    <div class="row">
         {% if messages %}
-        <div>
-            {% for message in messages %} {{ message }} {% endfor %}
+        {% for message in messages %}
+
+        <div class="alert alert-{{ message.tags }} text-center">
+            {{ message }}
         </div>
+        {% endfor %}
         {% endif %}
     </div>
 
@@ -86,7 +79,14 @@
     {% block content %} {% endblock %}
 
     <div id="footer" class="bg-dark">
-        <p>Hello, World!</p>
+        <div class="container">
+            <div class="row">
+
+                <p class="end-site">Bought one of my comics and want to share your opinion? Tell me all about it!</p>
+
+            </div>
+        </div>
+
         </id>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
