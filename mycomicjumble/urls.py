@@ -27,6 +27,7 @@ from search.views import do_search
 from cart import urls as urls_cart
 from cart.views import view_cart, add_to_cart
 from accounts.views import logout, login, register
+from accounts import urls as accounts_urls
 
 
 urlpatterns = [
@@ -40,5 +41,6 @@ urlpatterns = [
     url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^accounts/login/$', login, name="login"),
     url(r'^accounts/register/$', register, name="register"),
+    url(r'^accounts/', include(accounts_urls)),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
 ]
