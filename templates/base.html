@@ -64,25 +64,31 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if messages %}
+                {% for message in messages %}
 
-    <div class="row">
-        <div class="col">
-            {% if messages %}
-            {% for message in messages %}
-
-            <div class="alert alert-{{ message.tags }} text-center">
-                {{ message }}
+                <div class="alert alert-{{ message.tags }} text-center">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
-            {% endfor %}
-            {% endif %}
         </div>
     </div>
 
     {% block content %} {% endblock %}
 
-    <div id="footer-details" class="bg-dark">
-        <div class="row">
-            <p class="end-site">Bought one of my comics and want to share your opinion? Tell me all about it!</p>
+    <div class="container-fluid">
+        <div class="row bg-dark">
+            <div class="col">
+                <div id="footer-details">
+                    <p class="end-site">Bought one of my comics and want to share your opinion? Tell me all about it!
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
