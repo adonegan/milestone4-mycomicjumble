@@ -3,62 +3,70 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row no-gutter">
         <div class="jumbotron">
-            <h1 class="display-4">My Comic Jumble</h1>
-            <p class="lead">Welcome to my website, where I sell comic books from my own personal collection. You'll find
-                Marvel, DC and Boom! Studio Comics. You'll really be helping me out if you buy my comics because I need
-                to downsize and I'd like to give my comics a good home. Check out my comics by pressing on the blue
-                button below.</p>
-            <a class="btn btn-primary btn-lg mt-4" href="{% url 'comics' %}" role="button">Comics</a>
+            <div class="logo-box">
+                <img class="img-fluid" src="/media/images/comic-logo-black.png">
+            </div>
+            <p class="lead px-3">Welcome to my website, where I sell comic books from my own personal collection.
+                You'll find Marvel, DC and Boom! Studio Comics. You'll really be helping me out if you buy my comics because I
+                need to downsize and I'd like to give my comics a good home. Check out my comics by pressing on the blue
+                button below.
+                <a class="btn btn-info btn-lg btn-block mt-4" href="{% url 'comics' %}" role="button">Comic
+                    Store</a></p>
         </div>
     </div>
-
-    <div class="row no-gutters">
-        <div class="col-lg-3">
-            <div id="info-box">
-                <div class="card bg-success">
-                    <div class="card-body">
-                        <i class="fa fa-info fa-2x" aria-hidden="true"></i>
-                        <h5 class="card-title">Glossary</h5>
-                        <p class="card-text text-center">New to the comic and graphic novel universe? Get to know some
-                            of the terminology so you can comfortably find your way around the website.</p>
+</div>
+<div class="container">
+    <div class="section">
+        <h2 class="card-text mt-3 mb-3"> What you'll find on this site...</h2>
+        <div class="row no-gutters">
+            <div class="col-lg-3">
+                <div id="info-box">
+                    <div class="card bg-success">
+                        <div class="card-body">
+                            <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+                            <h5 class="card-title">Glossary</h5>
+                            <p class="card-text text-center">New to the comic and graphic novel universe? Get to know
+                                some of the terminology so you can comfortably find your way around the website.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <div id="info-box">
-                <div class="card bg-danger">
-                    <div class="card-body">
-                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
-                        <h5 class="card-title">Comic store</h5>
-                        <p class="card-text text-center"> Do you know what you want? Check out the comics in my
-                            collection, their condition and purchase the issues you've always wanted.</p>
+            <div class="col-lg-3">
+                <div id="info-box">
+                    <div class="card bg-danger">
+                        <div class="card-body">
+                            <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
+                            <h5 class="card-title">Comic store</h5>
+                            <p class="card-text text-center"> Do you know what you want? Check out the comics in my
+                                collection, their condition and purchase the issues you've always wanted.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <div id="info-box">
-                <div class="card bg-warning">
-                    <div class="card-body">
-                        <i class="fa fa-question big-icon fa-2x" aria-hidden="true"></i>
-                        <h5 class="card-title">Contact</h5>
-                        <p class="card-text text-center">Do you want to tell us your thoughts about our comics?
-                            Have you got a recommendation for the site? Fill in our form and get in touch with us.</p>
+            <div class="col-lg-3">
+                <div id="info-box">
+                    <div class="card bg-warning">
+                        <div class="card-body">
+                            <i class="fa fa-question big-icon fa-2x" aria-hidden="true"></i>
+                            <h5 class="card-title">Contact</h5>
+                            <p class="card-text text-center">Do you want to tell us your thoughts about our comics?
+                                Have you got a recommendation for the site? Fill in our form and get in touch with us.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <div id="info-box">
-                <div class="card bg-primary">
-                    <div class="card-body">
-                        <i class="fa fa-info fa-2x" aria-hidden="true"></i>
-                        <h5 class="card-title">Glossary</h5>
-                        <p class="card-text text-center">New to the comic and graphic novel universe? Get to know some
-                            of the terminology so you can comfortably find your way around the website.</p>
+            <div class="col-lg-3">
+                <div id="info-box">
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+                            <h5 class="card-title">Glossary</h5>
+                            <p class="card-text text-center">New to the comic and graphic novel universe? Get to know
+                                some of the terminology so you can comfortably find your way around the website.</p>
+                        </div>
                     </div>
                 </div>
             </div>
