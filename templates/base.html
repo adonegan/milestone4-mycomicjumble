@@ -30,16 +30,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    <a class="nav-link text-white" href="{% url 'comics' %}">Comics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'comics' %}">Comics</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'search' %}">Search</a>
+                    <a class="nav-link text-white" href="{% url 'search' %}">Search</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -47,20 +41,20 @@
                 <label class="badge badge-success mx-auto my-auto">{{ comic_count }}</label>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
+                    <a class="nav-link text-white" href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
                 </li>
 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                    <a class="nav-link text-white" href="{% url 'logout' %}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
                         Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    <a class="nav-link text-white" href="{% url 'register' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>
@@ -84,12 +78,52 @@
 
     {% block content %} {% endblock %}
 
-    <div class="container-fluid">
-        <div class="row bg-dark">
-            <div class="col">
-                <div id="footer-details">
-                    <p class="end-site">Bought one of my comics and want to share your opinion? Tell me all about it!
-                    </p>
+    <div class="container-fluid bg-dark">
+        <div id="footer-details">
+            <div class="row bg-dark">
+                <div class="col-lg-2">
+                    <div class="footer-links-box">
+                        <h5 class="footer-title">Social Media</h5>
+                        <ul class="social-links pl-1">
+                            <li class="list-inline-item">
+                                <a target="_blank" href="#" target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="#" target="_blank">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="#" target="_blank">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="#" target="_blank">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                    <span class="sr-only">YouTube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="footer-links-box">
+                        <h5 class="footer-title">Quicklinks</h5>
+                        <a href="{% url 'about' %}"><span class="footer-title">About</span></a>
+                        <span class="footer-title">Contact</span>
+                        <span class="footer-title">FAQ</span>
+                        <span class="footer-title">Privacy Policy</span>
+                        <span class="footer-title">Glossary</span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <img class="img-fluid" src="/media/images/comic-logo-white.png">
                 </div>
             </div>
         </div>
