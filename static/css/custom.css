@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: #feffe9;
+
 }
 
 .nav-item {
@@ -28,7 +30,7 @@ body {
 
 .card {
   max-width: 18rem;
-  margin: 10px;
+  margin: 20px 20px;
 }
 
 .card-title {
@@ -46,9 +48,7 @@ i.fa-2x {
   align-items: center;
 }
 
-i.fa-lg {
-  margin: 0px 5px;
-}
+
 p.card-text {
   justify-content: center;
 }
@@ -78,4 +78,30 @@ p.card-text {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: #fff;
+}
+
+#info-box { 
+  transition: all .2s ease-in-out; 
+}
+
+#info-box:hover { 
+  transform: scale(1.05);
+  color: white;
+}
+
+.card {
+  background-color: #fefefe;
+  border: solid 3px black;
+}
+
+hr {
+  background-color: black;
+}
+
+.input-field {
+  border: 1px solid black;
+}
+
+h1 {
+  padding: 20px;
 }
