@@ -3,10 +3,17 @@
 body {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0 0;
   border: 0;
-  background-color: #feffe9;
+  background-color: #fff;
 
+}
+
+.col-lg-12 {
+  position: relative;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .nav-item {
@@ -30,6 +37,8 @@ body {
 .card {
   max-width: 18rem;
   margin: 20px 20px;
+  background-color: #e0ffff;
+  border: solid 3px black;
 }
 
 .card-title {
@@ -89,10 +98,6 @@ p.card-text {
   color: white;
 }
 
-.card {
-  background-color: #fefefe;
-  border: solid 3px black;
-}
 
 hr {
   background-color: black;
@@ -147,7 +152,38 @@ h1 {
 
 .social-links a i {
   padding-top: 5px;
-  font-size: 30px;
+  font-size: 25px;
+  padding: 0.5px;
   color: white;
 }
 
+.alert {
+  padding: 15px 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+.pagination {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.form-control {
+  border: 2px solid black;
+}
+
+.breadcrumb {
+  background-color: white;
+}
+
+.breadcrumb-item a {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #d9534f;
+}
+
+.breadcrumb-item.active {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
