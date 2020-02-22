@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <nav aria-label="breadcrumb text-black">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Comics</a></li>
+            </ol>
+          </nav>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -8,11 +20,11 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-2 mb-4">
 
         {% for comic in comics %}
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-lg-4 col-md-4 col-sm-6">
             <div class="card">
                 <div class="card-body mx-auto">
 
@@ -22,8 +34,8 @@
                     </a>
                     {% endif %}
 
-                    <h5 class="card-text text-center">{{ comic.name }}</h5>
-                    <p class="card-text text-center">€{{ comic.price }}</p>
+                    <h5 class="card-text text-center mx-auto mt-2">{{ comic.name }}</h5>
+                    <p class="card-text text-center mx-auto">€{{ comic.price }}</p>
                 </div>
 
                 <form method="post" action="{% url 'add_to_cart' comic.id %}">
@@ -35,20 +47,23 @@
                     </div>
                 </form>
                 <br>
-
             </div>
         </div>
-
         {% endfor %}
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-3">
 
         {% for comic in comics %}
 
-
         {% endfor %}
-        <div class="pagination">
+
+        <div class="pagination mx-auto mb-5">
             <span class="step-links">
                 {% if comics.has_previous %}
-                        <a href="?page={{ comics.previous_page_number }}">Previous</a>
+                <a href="?page={{ comics.previous_page_number }}" class="btn btn-primary">Previous</a>
                 {% endif %}
 
                 <span class="current">
@@ -56,13 +71,13 @@
                 </span>
 
                 {% if comics.has_next %}
-                <a href="?page={{ comics.next_page_number }}">Next</a>
+                <a href="?page={{ comics.next_page_number }}" class="btn btn-primary">Next</a>
                 {% endif %}
             </span>
         </div>
-
-
-
     </div>
 </div>
+
+
+
 {% endblock %}
