@@ -38,7 +38,7 @@ body {
   max-width: 18rem;
   margin: 20px 20px;
   background-color: #e0ffff;
-  border: solid 3px black;
+  border: solid 1px black;
 }
 
 .card-title {
@@ -67,16 +67,17 @@ p.card-text {
   align-items: center;
 }
 
-.form-group {
+.outer-form {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  border: solid 2px black;
+  border: solid 1px black;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #e0ffff;
+  margin-bottom: 50px;
 }
 
 .helptext {
@@ -169,7 +170,7 @@ h1 {
 }
 
 .form-control {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .breadcrumb {
@@ -187,3 +188,4 @@ h1 {
   font-weight: 400;
   color: #000;
 }
+
