@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -9,9 +10,9 @@
     <div class="row">
         <div class="col">
             <form method="POST">
-                <div class="form-group">
+                <div class="outer-form">
                     <p class="card-text">You must sign in to purchase the comics. If you don't already have an account, <a href="{% url 'register' %}">register here.</a></p>
-                    {% csrf_token %} {{ login_form.as_p }}
+                    {% csrf_token %} {{ login_form|crispy }}
                     <button type="submit" class="btn btn-danger">Login</button>
                 </div>
             </form>
