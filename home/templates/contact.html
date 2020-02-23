@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="card-text">Contact Us</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form method="POST">
+                <div class="outer-form">
+                    <p class="card-text">Get in touch with us!</p>
+                    {% csrf_token %} {{ form|crispy }}
+                    <button type="submit" class="btn btn-danger">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
