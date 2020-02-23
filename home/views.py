@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
+from .forms import ContactForm
 
 
 def index(request):
@@ -10,3 +11,9 @@ def index(request):
 def about_view(request):
     """A view that displays the about page"""
     return render(request, "about.html")
+
+
+def contact_view(request):
+    """A view that displays the contact page"""
+    contact_form = ContactForm
+    return render(request, "contact.html", {'form': contact_form})
