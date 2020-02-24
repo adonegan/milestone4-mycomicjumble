@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
 <div class="container">
-    <div class="row mb-3">
+    <div class="row my-3">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <h1 class="card-text">Glossary</h1>
         </div>
@@ -11,12 +12,131 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col">
-
-
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-center card-text">Grades</h3>
+            <button class="collapsible card-text">Mint Condition</button>
+            <div class="content card-text">
+                <p class="my-2">A perfect copy with no defects.</p>
+            </div>
+            <button class="collapsible card-text">Near Mint</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A nearly perfect copy that looks brand new with only a few very minor defects.
+                    Acceptable minor defects on a NM copy include: a very small amount of spine stresses, very minor
+                    instances of denting (two or three at most), slight corner blunting, and minor (less than 1/8")
+                    bends without color breaks.</p>
+            </div>
+            <button class="collapsible card-text">Very Fine</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A VF copy has minor defects, but is in overall excellent condition. Most well-kept
+                    modern comics (especially if they have been read) fall into this grade. Acceptable defects on a VF
+                    are minor and include: Minor corner wear, a light accumulation of spine stress that may include
+                    color-break, a light accumulation of dents, and bends or folds less than 1/4" (note that on a VF
+                    copy, some color-break is allowed in a bend/fold).</p>
+            </div>
+            <button class="collapsible card-text">Fine</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A comic in FN condition is considered "above average" but still displays some wear. In
+                    general, the eye appeal is somewhat reduced due to either an accumulation of minor defects or one or
+                    two moderate defects. Acceptable defects on a FN copy include: Slight spine roll, a moderate
+                    accumulation of spine stresses that may break color, a spine split of less than 1/2", minor water
+                    spotting or residue (less than the size of a dime), an impacted corner, and moderate foxing.</p>
+            </div>
+            <button class="collapsible card-text">Very Good</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A comic in VG condition shows some significant wear, but has not accumulated enough
+                    total defects to reduce eye appeal to the point that it is not a desirable copy. A VG copy may have
+                    an accumulation of minor defects or one or two major ones. Acceptable defects on a VG copy include:
+                    Spine roll, 1/2" to 1" spine splits or other tears, a cover or centerfold that is detached at one
+                    staple, discoloration due to oxidation, and a moderate accumulation of water damage or staining.</p>
+            </div>
+            <button class="collapsible card-text">Good</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A GD copy has major defects, but is still complete and readable. A GD copy will have a
+                    significant amount of damage, usually an accumulation of smaller defects punctuated with some major
+                    defects. Acceptable defects on a GD copy include: A vertical book-length crease, 1.5"-2" spine
+                    split, cover or centerfold completely detached, major tears, heavy discoloration/brittleness due to
+                    oxidation, heavy amounts of staining, residue, and water damage.</p>
+            </div>
+            <button class="collapsible card-text">Fair</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A FR is the lowest grade a comic book can receive as long as the story and art are
+                    complete. A FR copy will have virtually no eye appeal and will display major damage. A comic book in
+                    FR condition may have non-story elements such as coupons, ad pages, or Marvel Value Stamps cut or
+                    torn out of the book. Types of damage that place a comic in FR range include: A spine split of up to
+                    2/3 the length of the book, a missing back cover provided the front cover is still attached, severe
+                    water damage or residue damage, mold, and paper deterioration due to oxidation.</p>
+            </div>
+            <button class="collapsible card-text">Poor</button>
+            <div class="content card-text mb-4 text-justify">
+                <p class="my-2">Comic books in PR condition may be missing up to 4 pages (two spreads) of story pages or
+                    display severe damage that affects the readability of the book.</p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-center card-text">Condition</h3>
+            <button class="collapsible card-text">Bend</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">When part of a comic is curved, interrupting the flat, smooth cover surface. Bends WILL
+                    NOT show distinct lines (see also crease/fold).</p>
+            </div>
+            <button class="collapsible card-text">Crease</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A fold that causes ink removal/color break, usually resulting in a white line (see
+                    bend/fold).</p>
+            </div>
+            <button class="collapsible card-text">Denting</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">Indentations or dimpling (usually in the cover) that don't penetrate the paper or remove
+                    any gloss, but do interrupt the smooth, flat surface.</p>
+            </div>
+            <button class="collapsible card-text">Dust Shadow</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">When a comic has been stored in a stack at some point in its life, any portions of the
+                    cover that weren't covered up by the adjacent books have been exposed to environmental air, light,
+                    and settling dust particles, sometimes creating lines of discoloration along the edges.</p>
+            </div>
+            <button class="collapsible card-text">Fingerprints</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">When finger oils left behind from everyday handling remain on a comic's surface, they
+                    can begin to eat away at the ink, literally creating color-breaking fingerprints on the cover that
+                    are sometimes distinct and sometimes smudged. Finger oils can usually be wiped away, but
+                    fingerprints are irreversible.</p>
+            </div>
+            <button class="collapsible card-text">Spine Break</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">A spine stress that has devolved into a tear (usually through multiple wraps). Spine
+                    breaks greatly decrease the spine's structural integrity and are often found close to the staples.
+                </p>
+            </div>
+            <button class="collapsible card-text">Staple Detached</button>
+            <div class="content card-text text-justify">
+                <p class="my-2">When a wrap has come completely loose from a staple and is no longer bound to the comic
+                    in that area.</p>
+            </div>
+            <button class="collapsible card-text">Reading Crease</button>
+            <div class="content card-text mb-4 text-justify">
+                <p class="my-2">A vertical cover crease near the staples that runs (generally) parallel to the spine,
+                    caused by bending the cover over the staples or just too far to the left. Squarebound books get
+                    these very easily.</p>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 {% endblock %}
