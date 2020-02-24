@@ -19,7 +19,7 @@ from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from home import urls as urls_home
-from home.views import index, about_view, contact_view, glossary_view, privacy_view, terms_view
+from home.views import index, about_view, contact_view, glossary_view, privacy_view, terms_view, faqs_view
 from comics import urls as urls_comics
 from comics.views import all_comics, detail
 from search import urls as urls_search
@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^glossary/', glossary_view, name='glossary'),
     url(r'^privacy/', privacy_view, name='privacy'),
     url(r'^terms/', terms_view, name='terms'),
+    url(r'^faqs/', faqs_view, name='faqs'),
     url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^search/', include(urls_search), name='search'),
     url(r'^cart/', include(urls_cart)),
