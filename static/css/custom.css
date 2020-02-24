@@ -209,3 +209,7 @@ hr {
   transition: max-height 0.2s ease-out;
   background-color: #fff5ee;
 }
+
+h5.question {
+  font-weight: 500;
+}
