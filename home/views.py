@@ -32,3 +32,8 @@ def privacy_view(request):
 def terms_view(request):
     """A view that displays the terms and conditions page"""
     return render(request, "terms.html")
+
+
+def faqs_view(request):
+    """A view that displays the faqs page"""
+    return render(request, "faqs.html")
