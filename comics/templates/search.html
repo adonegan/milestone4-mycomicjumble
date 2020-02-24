@@ -28,6 +28,7 @@
 <div class="container">
     <div class="row mt-4 mb-5">
         {% for comic in comics %}
+
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
                 <div class="card-body mx-auto">
@@ -46,5 +47,28 @@
         {% endfor %}
     </div>
 </div>
+
+
+<div class="container">
+    <div class="row my-3">
+
+        <div class="pagination mx-auto mb-5">
+            <span class="step-links">
+                {% if comics.has_previous %}
+                <a href="?page={{ comics.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="btn btn-primary">Previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ comics.number }} of {{ comics.paginator.num_pages }}
+                </span>
+
+                {% if comics.has_next %}
+                <a href="?page={{ comics.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="btn btn-primary">Next</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
