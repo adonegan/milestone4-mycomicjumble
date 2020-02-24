@@ -17,3 +17,7 @@ def contact_view(request):
     """A view that displays the contact page"""
     contact_form = ContactForm
     return render(request, "contact.html", {'form': contact_form})
+
+def glossary_view(request):
+    """A view that displays the glossary page"""
+    return render(request, "glossary.html")
