@@ -17,7 +17,7 @@
                 <div class="card-body mx-auto">
 
                     {% if item.comic.image %}
-                    <img class="card-img-top" src="/media/{{ item.comic.image }}">
+                    <img class="card-img-top" src="{{ MEDIA_URL }}{{ item.comic.image }}">
                     {% endif %}
 
                     <h5 class="card-text text-center">{{ item.comic.name }}</h5>

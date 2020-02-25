@@ -30,7 +30,7 @@
 
                     {% if comic.image %}
                     <a href="{% url 'detail' comic.id %}">
-                        <img class="card-img-top" src="/media/{{ comic.image }}">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ comic.image }}">
                     </a>
                     {% endif %}
 
