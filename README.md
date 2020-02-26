@@ -93,81 +93,101 @@ IMAGE
 
 ## Technologies Used
 
-VSCode
+### VSCode
 
-- On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies.
+On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies and packages. You can download VSCode for your machine on Visual Studio Code's website here <https://code.visualstudio.com/docs/setup/setup-overview>. You can add extensions to help with your project. Use its source control tab to commit and push changes to your local repository.
 
-Django
+### Django
 
-- This web application framework was used to create the entire app using programming language Python.
+This web application framework is used to create the entire app and is written in Python. It is installed via pip3 install django(ADD VERSION) through your code editor. Once you add your project using django-admin startproject PROJECTNAME (dot), then you'll have access to Settings.py, URLs.py and other files. Then you can add apps, which are smaller self-contained components within the project.
 
-Python
+### HTML5
 
-HTML5
+HTML is the standard markup for web pages and stands for Hyper Text Markup Language. It is used to add and maintain structure for the content of information on web pages on the app. In conjunction with Bootstrap's grid system, the HTML supports all content on the site. The base.html page is created first by declaring its HTML5 structure using <!DOCTYPE html> and then addition elements, including head, title and body elements.
 
-- HTML was used to add and maintain structure for the pages on the app. In conjunction with Bootstrap's grid system, the HTML supports all content on the site.
+### Django's templating language
 
-Jinja
+A template system is incorporated in this project. First, create your base.html and then in additonal pages add {% extends "base.html" %} to the top of the page. This means anything on the base.html page will display on the new page. The unique code is written between {% block content %} and {% endblock %} placeholders in each other page. Templating is very helpful when avoiding repeated coding structures and when displaying the navbar and footer on each page, for example.
 
-CSS3
+### CSS3
 
-JavaScript
+Custom CSS and style attributes have been added via an external CSS stylesheet that is added to the head of the base.html file - CSS is rendered on each page that extends from the base.html page. While the CSS sheet contains most code, other styling attributes have been added inline using style tags in the HTML structure and for Bootstrap's inline spacing and color specifications.
 
-jQuery
+### JavaScript
 
-- This was used to make some Bootstrap elements functional. For example, the collapsible navbar on mobile and its ability to be tapped into a dropdown.
+In this project JavaScript was used primarily for the Stripe set up, using an external stripe.js file which is the library that Stripe itself provides. It helps users on a store complete checkout and enables the developer to collect important and private payment information safely. More information on this can be found here <https://stripe.com/docs/stripe-js>. JavaScript was also copied from W3schools for the collapsible feature on the glossary page. And Bootstrap is dependent on JavaScript and its library, along with jQuery and Popper.js is added to the base.html page.
 
-Bootstrap
+### jQuery
 
-- This technology added structured and well-designed content from the box. Primilary used for its grid layout, this technology enable my app to be responsive.
+This was used to make some Bootstrap elements functional. For example, the collapsible navbar on mobile and its ability to be tapped into a dropdown was created visually with CSS, but only works because of the jQuery that is involved. The jQuery library is added to the head element.
 
-Heroku
+### Bootstrap 4
 
-SQLite3
+This technology aides in the development of information structure on the page. This service provides well-designed, structured containers that require little additional modification. Aside from components on the page, Bootstrap is also used for its grid layout, which enables my app to be responsive on all devices. Its emphasis on spacing by padding and margin on the x and y axis has been employed inline throughout the html code per page: mx-auto for margin-right and margin-left automatic spacing, for example.
 
-PostgreSQL
+### Heroku
 
-Github
+This platform is used to build, run and deploy the project and is hosting my project in production. It hosts the database used in project too, PostgreSQL. You need to create an app, set config variables and then deploy. See Heroku Deployment for more indepth information.
 
-Balsamiq
+### SQLite3
 
-- This technology was used at the start of the project, during the Skeleton Plane, to plot out the look of the web page.
+This database, by default, comes with the Django package and is used primarily in development. Tables within the database are created using modelsa and using python3 manage.py makemigration and then migrate. In production this set up is mirrored in the new PostreSQL database.
 
-Travis
+### PostgreSQL
 
-Google Fonts
+This is the database used in production. It can be accessed as an add-on feature in Heroku at multiple pricing brackets, including a free tier. Go to the Resources tab and in the add-on section, type in PostgreSQL to see options. Initialise the database by python3 manage.py makemigrations and migrate.
 
-- The main font used on the site is Quicksand with font weights of 400, 500 and 700.
+### Github
+
+Github is my local repository. Here you can see the development of the code I've added, from the first file to the last. To start you initialise git by typing in 'git init' in your terminal and then you can add commit messages that when pushed to the repository can be viewed online. Its purpose is version control, to highlight the changes of the code during the project.
+
+### Balsamiq
+
+This technology is generally used at the start of a project, during the Skeleton Plane, to plot out the look of the app and its primary pages. In the formation of the project, it helps to visualise elements pre-coding but you can also use it to develop pages mid-project.
+
+### Travis
+
+This is a tool for continuous integration and testing. Its purpose is to test smaller chunks of code continously. After pushing changes to Github Travis will let you know if your code passes the requirements you've set. When Travis is synced up to Github repository you can see if your build passes or fails and then see your project's build history.
+
+### Google Fonts
+
+The font used on the site is Quicksand with font weights of 400, 500 and 700 to differentiate between different types of text - paragraph, heading and special text, for example. While it is possible to add additional weights and styles of this font, I used minimal specifications to keep my site loading quickly.
 
 ## Testing
 
-### Continous Integration
+### Continous Integration - Travis
 
-From the beginning of this project, Continuous Integration - which means to test code in smaller chunks more often - was employed. In this project, Travis was used. To set this up, you'll need an account with Travis > connect it to the Github repository. Add a .yml file to the root directory of your project, where language, version, requirements and script are specified. Then the first build takes place, which takes a few seconds as Travis tests all the code submitted. A build icon is placed at the top of this README.md file and is used to keep track of passing or failing code.
+From the beginning of this project, Continuous Integration - which means to test code in smaller chunks more often - was employed. In this project, Travis was used. To set this up, you'll need an account with Travis > connect it to the Github repository. Add a .travis.yml file to the root directory of your project, where language, version, requirements and script are specified - you'll also need a dummy SECRET_KEY. See below for an example:
+
+![travis](/media/images/travis.png)
+
+Then the first build takes place, which takes a few seconds as Travis tests all the code submitted. A build icon can be placed at the top of your README.md file, which is used to keep track of passing or failing code. When you click on the build icon you'll be redirected to the Travis website to see the build's code history.
 
 ## Deployment
 
 ### Running the project locally
 
-This project was created, developed on run locally using a MacBook Air and VSCode as an IDE. I started the project, first by creating a workspace on my local machine and then opening the folder on VSCode. I added README.md file as the first file and then created a .gitignore file in anticipation for the files that would need to be ignored for the project.
+This project was created, developed on run locally using a MacBook Air and VSCode as an IDE. To start the project, first create a workspace on your local machine and then open the folder on VSCode or an IDE of your choice. Add the README.md file as the first file and then create a .gitignore file in anticipation for the files that would need to be ignored for the project.
 
-Following this, I created a virtual environment using Python3 -m venv env and then activated it by opening a new terminal on VSCode. Next, I installed Django by using pip3 install Django==1.11.28. I then added my project folder 'mycomicjumble' in order to access the Settings.py file and addition files for my project.
+Following this, create a virtual environment using Python3 -m venv env and then activate it by opening a new terminal on your IDE. Next, install Django by using pip3 install Django==1.11.28 - or another version of your choice. Then add your project folder - in my case it's 'mycomicjumble' - in order to access the Settings.py file and additional files for the project.
 
-Before initialising git and pushing to my local repositiory on Github, I ensured that the SECRET_KEY contained in the Settings.py file was added to an Env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then I initialised git, added a commit message and then pushed everything to my online repository at Github - accessible here: <https://github.com/adonegan/milestone4-mycomicjumble>.
+Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then initialise git, add a commit message and then push everything to your online repository. For me, this is at Github - accessible here: <https://github.com/adonegan/milestone4-mycomicjumble>.
 
-The project was visible and accessible locally by using python3 manage.py runserver on VSCode. To exit the project, press Control-C. I initialised my database by using python3 manage.py migrate. Following this, I added a base.html page as a top level file for the project and when I added new apps by using python3 manage.py startapp Home, for example, I extended the base.html file to new pages in this app.
+The project is now visible and accessible locally by using python3 manage.py runserver on your IDE. To exit the project, press Control-C, if using VSCode. Initialise the database and create tables within it by using python3 manage.py migrate. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp Home, for example) extend the base.html file to new pages.
 
-### Heroku
+### Heroku Deployment
 
-When I felt the end of the project was approaching I began to prepare for deployment on Heroku. I did this by creating an app in my Heroku account. In the resources tab I opted for a Postgres database for my project - I chose the free one. Selecting then pushed my database URL to the config vars section in Settings tab in Heroku.
+Deploying to Heroku can take place at the start, in the middle or at the end of the project. I deployed my project to Heroku at the end of the project so I could focus on the build in development.
 
-Locally, I used pip to install dj-database-url to my project so my project could read the Postgres database. In the Settings.py file I commented out the SQLite datase in favour of using Postgres: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}. I also installed psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
+To deploy, create an app in your Heroku account. In the resources tab you can opt for a PostgreSQL database for the project - I chose the free one for this project. Selecting this database option pushed my Database URL to the config vars section in the Settings tab in Heroku.
 
-I then added all keys and urls in my Env.py file to the config vars section of the Settings tab within Heroku so they could be supported there. Then I used python3 manage.py makemigrations and python3 manage.py migrate - making sure Stripe and Pillow as dependencies were added. I then created a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because Postgres is the new database.
+Locally, use pip3 to install dj-database-url to your project - this is so the PostgreSQL database can be supported. In the Settings.py file comment out the SQLite database that comes with Django in favour of using Heroku's PostgreSQL database. Use this code: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} and import dj_database_url at the top of the Settings.py file. In addition to this, insall psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
 
-Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that was set up, I used pip3 freeze --local > requirements.txt to ensure all dependencies were in place. Then I created my Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application).
+Add all keys and urls in the env.py file to the config vars section of the Settings tab within Heroku so they can be supported there. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the database. Then create a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because PostgreSQL is the new database.
 
-When my app url was generated, I added it - via an environment variable - to the ALLOWED_HOSTS section in my Settings.py file so the URL could be accessed. When the project was completed, I changed Debug = False.
+Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that is set up, use pip3 freeze --local > requirements.txt to ensure all dependencies are in place. After this, create the Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application is mine, for example).
+
+When the Heroku app url is generated, add it - via an environment variable - to the ALLOWED_HOSTS section in the Settings.py file. When the project is complete, change Debug = False.
 
 ## Credits
 
