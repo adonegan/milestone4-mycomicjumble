@@ -144,3 +144,27 @@ Google Fonts
 ### Continous Integration
 
 From the beginning of this project, Continuous Integration - which means to test code in smaller chunks more often - was employed. In this project, Travis was used. To set this up, you'll need an account with Travis > connect it to the Github repository. Add a .yml file to the root directory of your project, where language, version, requirements and script are specified. Then the first build takes place, which takes a few seconds as Travis tests all the code submitted. A build icon is placed at the top of this README.md file and is used to keep track of passing or failing code.
+
+## Deployment
+
+### Running the project locally
+
+This project was created, developed on run locally using a MacBook Air and VSCode as an IDE. I started the project, first by creating a workspace on my local machine and then opening the folder on VSCode. I added README.md file as the first file and then created a .gitignore file in anticipation for the files that would need to be ignored for the project.
+
+Following this, I created a virtual environment using Python3 -m venv env and then activated it by opening a new terminal on VSCode. Next, I installed Django by using pip3 install Django==1.11.28. I then added my project folder 'mycomicjumble' in order to access the Settings.py file and addition files for my project.
+
+Before initialising git and pushing to my local repositiory on Github, I ensured that the SECRET_KEY contained in the Settings.py file was added to an Env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then I initialised git, added a commit message and then pushed everything to my online repository at Github - accessible here: https://github.com/adonegan/milestone4-mycomicjumble
+
+The project was visible and accessible locally by using python3 manage.py runserver on VSCode. To exit the project, press Control-C. I initialised my database by using python3 manage.py migrate. Following this, I added a base.html page as a top level file for the project and when I added new apps by using python3 manage.py startapp Home, for example, I extended the base.html file to new pages in this app.
+
+### Heroku
+
+When I felt the end of the project was approaching I began to prepare for deployment on Heroku. I did this by creating an app in my Heroku account. In the resources tab I opted for a Postgres database for my project - I chose the free one. Selecting then pushed my database URL to the config vars section in Settings tab in Heroku.
+
+Locally, I used pip to install dj-database-url to my project so my project could read the Postgres database. In the Settings.py file I commented out the SQLite datase in favour of using Postgres: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}. I also installed psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
+
+I then added all keys and urls in my Env.py file to the config vars section of the Settings tab within Heroku so they could be supported there. Then I used python3 manage.py makemigrations and python3 manage.py migrate - making sure Stripe and Pillow as dependencies were added. I then created a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because Postges is the new database.
+
+Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that was set up, I used pip3 freeze --local > requirements.txt to ensure all dependencies were in place. Then I created my Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application).
+
+When my app url was generated, I added it - via an environment variable - to the ALLOWED_HOSTS section in my Settings.py file so the URL could be accessed. When the project was completed, I changed Debug = False.
