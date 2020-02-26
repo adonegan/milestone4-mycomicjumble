@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0 0;
   border: 0;
-  background-color: #fde9c9;
+  background-color: #1d4d4f;
 }
 
 .col-lg-12 {
@@ -25,6 +25,15 @@ body {
 .card-text {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
+  color: white;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #1d4d4f;
+  border-color: #1d4d4f;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
 }
 
 #footer-details {
@@ -36,8 +45,15 @@ body {
 .card {
   max-width: 18rem;
   margin: 20px 20px;
-  background-color: #e0ffff;
+  background-color: #0b0b0d;
   border: solid 1px black;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  background-color: #0b0b0d;
+  color: white;
 }
 
 .card-title {
@@ -102,7 +118,7 @@ p.card-text {
 
 
 hr {
-  background-color: black;
+  background-color: white;
 }
 
 .input-field {
@@ -120,6 +136,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #fafafa;
 }
 
 .logo-box {
@@ -167,6 +184,7 @@ hr {
 .pagination {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
+  color: white;
 }
 
 .form-control {
@@ -174,13 +192,13 @@ hr {
 }
 
 .breadcrumb {
-  background-color: white;
+  background-color: #1d4d4f;
 }
 
 .breadcrumb-item a {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  color: #d9534f;
+  color: #ffe75e;
 }
 
 .breadcrumb-item.active {
@@ -202,7 +220,7 @@ hr {
 }
 
 .active, .collapsible:hover {
-  background-color: #292b2c;
+  background-color: #0b0b0d;
 }
 
 .content {
@@ -216,4 +234,28 @@ hr {
 
 h5.question {
   font-weight: 500;
+}
+
+.collapse-text {
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.badge-success {
+  color: #000;
+  background-color: #ffe75e;
+}
+
+.btn-danger {
+  color: #000;
+  background-color: #ffe75e;
+  border-color: #ffe75e;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #ffe75e;
+  border-color: #ffe75e;
+  color: #000;
 }
