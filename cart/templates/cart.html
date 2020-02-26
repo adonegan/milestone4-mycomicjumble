@@ -8,21 +8,15 @@
     <p class="card-text mt-3 mb-3"> This is the contents of your cart. Proceed to checkout by clicking on the green
         button below.</p>
     <div class="row">
-
-
         {% for item in cart_items %}
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div class="card">
                 <div class="card-body mx-auto">
-
                     {% if item.comic.image %}
                     <img class="card-img-top" src="{{ MEDIA_URL }}{{ item.comic.image }}">
                     {% endif %}
-
                     <h5 class="card-text text-center">{{ item.comic.name }}</h5>
                     <p class="card-text text-center">€{{ item.comic.price }}</p>
-
                     <form method="post" action="{% url 'remove_from_cart' item.id %}">
                         {% csrf_token %}
                         <div class="input-group card-text text-center">
@@ -33,21 +27,19 @@
                     </form>
                 </div>
             </div>
-
         </div>
         {% endfor %}
-
     </div>
 </div>
 <div class="container">
     <hr>
-    <div class="row">
-        <div class="col-lg-7"></div>
-        <div class="col-lg-3">
+    <div class="row mx-auto">
+        <div class="col-xl-7 col-lg-7 col-md-2 col-sm-12 col-xs-12"></div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
             <h2 class="card-text my-2">Total: €{{ total }}</h2>
         </div>
-        <div class="col-lg-2">
-            <a href="{% url 'checkout' %}" class="btn btn-success btn-lg mt-2 mb-4" role="button">Checkout</a>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-sm-12">
+            <a href="{% url 'checkout' %}" class="btn btn-success btn-lg mt-2 mb-4 mx-auto" role="button">Checkout</a>
         </div>
     </div>
 </div>
