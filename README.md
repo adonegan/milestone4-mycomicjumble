@@ -163,7 +163,7 @@ When I felt the end of the project was approaching I began to prepare for deploy
 
 Locally, I used pip to install dj-database-url to my project so my project could read the Postgres database. In the Settings.py file I commented out the SQLite datase in favour of using Postgres: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}. I also installed psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
 
-I then added all keys and urls in my Env.py file to the config vars section of the Settings tab within Heroku so they could be supported there. Then I used python3 manage.py makemigrations and python3 manage.py migrate - making sure Stripe and Pillow as dependencies were added. I then created a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because Postges is the new database.
+I then added all keys and urls in my Env.py file to the config vars section of the Settings tab within Heroku so they could be supported there. Then I used python3 manage.py makemigrations and python3 manage.py migrate - making sure Stripe and Pillow as dependencies were added. I then created a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because Postgres is the new database.
 
 Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that was set up, I used pip3 freeze --local > requirements.txt to ensure all dependencies were in place. Then I created my Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application).
 
@@ -173,7 +173,7 @@ When my app url was generated, I added it - via an environment variable - to the
 
 - The text for the glossary page, in the Grades and Conditions sections, was copied from mycomicshop.com/help/grading <https://www.mycomicshop.com/help/grading> and modifed by me.
 
-- The comic cover images were sourced on Marvels official website (marvel.com), and Boom! Studio's official website (www.boom-studios.com)
+- The comic cover images were sourced on Marvels official website <marvel.com>, and Boom! Studio's official website <www.boom-studios.com>.
 
 - The text beside comics on each details page was copied from marvel.com (for all Marvel comics), from Boom! Studios and buffy.fandom.com/wiki (for Buffy and Angel comics).
 
