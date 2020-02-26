@@ -153,7 +153,7 @@ This project was created, developed on run locally using a MacBook Air and VSCod
 
 Following this, I created a virtual environment using Python3 -m venv env and then activated it by opening a new terminal on VSCode. Next, I installed Django by using pip3 install Django==1.11.28. I then added my project folder 'mycomicjumble' in order to access the Settings.py file and addition files for my project.
 
-Before initialising git and pushing to my local repositiory on Github, I ensured that the SECRET_KEY contained in the Settings.py file was added to an Env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then I initialised git, added a commit message and then pushed everything to my online repository at Github - accessible here: https://github.com/adonegan/milestone4-mycomicjumble
+Before initialising git and pushing to my local repositiory on Github, I ensured that the SECRET_KEY contained in the Settings.py file was added to an Env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then I initialised git, added a commit message and then pushed everything to my online repository at Github - accessible here: <https://github.com/adonegan/milestone4-mycomicjumble>.
 
 The project was visible and accessible locally by using python3 manage.py runserver on VSCode. To exit the project, press Control-C. I initialised my database by using python3 manage.py migrate. Following this, I added a base.html page as a top level file for the project and when I added new apps by using python3 manage.py startapp Home, for example, I extended the base.html file to new pages in this app.
 
@@ -168,3 +168,13 @@ I then added all keys and urls in my Env.py file to the config vars section of t
 Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that was set up, I used pip3 freeze --local > requirements.txt to ensure all dependencies were in place. Then I created my Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application).
 
 When my app url was generated, I added it - via an environment variable - to the ALLOWED_HOSTS section in my Settings.py file so the URL could be accessed. When the project was completed, I changed Debug = False.
+
+## Credits
+
+- The text for the glossary page, in the Grades and Conditions sections, was copied from mycomicshop.com/help/grading <https://www.mycomicshop.com/help/grading> and modifed by me.
+
+- The comic cover images were sourced on Marvels official website (marvel.com), and Boom! Studio's official website (www.boom-studios.com)
+
+- The text beside comics on each details page was copied from marvel.com (for all Marvel comics), from Boom! Studios and buffy.fandom.com/wiki (for Buffy and Angel comics).
+
+- Text on the Privacy Policy page was generated from <https://www.privacypolicygenerator.info/>. Likewise, text on the Terms & Conditions page is from <https://www.termsandconditionsgenerator.com/>.
