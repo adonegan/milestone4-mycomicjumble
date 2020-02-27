@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Comic
 
 
 def all_comics(request):
-    """Show all comics but paginate after eight comics display on page"""
+    """Show all comics but paginate after nine comics display on page"""
     comics_list = Comic.objects.all()
     paginator = Paginator(comics_list, 9)
 
