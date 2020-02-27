@@ -6,7 +6,7 @@ from .models import Comic
 def all_comics(request):
     """Show all comics but paginate after eight comics display on page"""
     comics_list = Comic.objects.all()
-    paginator = Paginator(comics_list, 8)
+    paginator = Paginator(comics_list, 9)
 
     page = request.GET.get('page')
     try:
