@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^comics/', include(urls_comics), name='comics'),
     url(r'^search/', include(urls_search), name='search'),
     url(r'^cart/', include(urls_cart)),
-    url(r'^comics/details/(?P<comic_id>[0-50]+)', detail, name='detail'),
+    url(r'^comics/details/(?P<comic_id>\d+/)$', detail, name='detail'),
     url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^accounts/login/$', login, name="login"),
     url(r'^accounts/register/$', register, name="register"),
