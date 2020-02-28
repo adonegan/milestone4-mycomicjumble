@@ -20,6 +20,8 @@ body {
   font-weight: 500;
 }
 
+/* The card-text is the primary 
+styling for test */
 .navbar-brand,
 .display-4,
 .card-text {
@@ -28,20 +30,14 @@ body {
   color: white;
 }
 
-.btn-info {
-  color: #fff;
-  background-color: #1d4d4f;
-  border-color: #1d4d4f;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 400;
-}
-
+/* Top part of footer, for page links */
 #footer-details {
   min-height: 130px;
   padding-top: 20px;
   text-align: center;
 }
 
+/* Styling for comic display */
 .card {
   max-width: 18rem;
   margin: 20px 20px;
@@ -56,6 +52,7 @@ body {
   color: white;
 }
 
+/* For titles on cards on Index page */
 .card-title {
   margin: 10px 0px;
   display: flex;
@@ -66,6 +63,7 @@ body {
   font-weight: 500;
 }
 
+/* Icons on Index Page animation */
 i.fa-2x {
   padding-top: 15px;
   display: flex;
@@ -73,44 +71,15 @@ i.fa-2x {
   align-items: center;
 }
 
-
-p.card-text {
-  justify-content: center;
-}
-
-.page-titles {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
+/* Styling for all forms */
 .outer-form {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  /*border: solid 1px black;*/
   padding: 45px;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #0b0b0d;*/
   margin-bottom: 50px;
 }
 
-.helptext {
-  font-size: 10px;
-}
-
-.end-site {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  color: #fff;
-}
-
-.text-muted {
-  color: blue;
-}
-
+/* Animation on Index page*/
 #info-box { 
   transition: all .2s ease-in-out; 
 }
@@ -120,7 +89,8 @@ p.card-text {
   color: white;
 }
 
-
+/* On multiple pages to separate 
+chunks of text */
 hr {
   background-color: white;
 }
@@ -152,11 +122,6 @@ hr {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
 }
-/*
-.section {
-  padding: 20px 0px;
-  margin-bottom: 20px;
-}*/
 
 .footer-links-box {
   margin-top: 40px;
@@ -195,6 +160,8 @@ hr {
   border: 1px solid black;
 }
 
+/* So users can go back to previous 
+page from Details > Comics > Home */
 .breadcrumb {
   background-color: #1d4d4f;
 }
@@ -211,6 +178,8 @@ hr {
   color: #000;
 }
 
+/* To show and hide large 
+chunks of text */
 .collapsible {
   background-color: #dc3545;
   color: white;
@@ -246,11 +215,15 @@ h5.question {
   font-weight: 400;
 }
 
+/* In the navbar beside cart 
+to show items in cart */
 .badge-success {
   color: #000;
   background-color: #ffe75e;
 }
 
+/* Using Bootstrap and custom 
+colors for changes on hover */
 .btn-danger {
   color: #000;
   background-color: #ffe75e;
@@ -264,12 +237,22 @@ h5.question {
   color: #000;
 }
 
+.btn-info {
+  color: #fff;
+  background-color: #1d4d4f;
+  border-color: #1d4d4f;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
 label {
   display: inline-block;
   margin-bottom: .5rem;
   color: white;
 }
 
+/* To make links display better 
+against dark background */
 a {
   color: #ffe75e;
   text-decoration: none;
