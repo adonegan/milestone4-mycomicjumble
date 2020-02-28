@@ -1,7 +1,7 @@
 # My Comic Jumble
 
 [![Build Status](https://travis-ci.org/adonegan/milestone4-mycomicjumble.svg?branch=master)](https://travis-ci.org/adonegan/milestone4-mycomicjumble)
-My Comic Jumble is a small online store selling second-hand comic books. The owner of My Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of My Comic Jumble is to display, describe and sell second-hand comic lovers.
+My Comic Jumble is a small online store selling second-hand comic books. The owner of My Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of My Comic Jumble is to display, describe and sell second-hand comic lovers. This is a webapp created for **education purposes only**.
 
 ## UX
 
@@ -57,11 +57,11 @@ All html pages extend from the base.html page where the navbar and footer live. 
 
 - Privacy Policy page
 
-  - This page was created using a generator, <https://www.privacypolicygenerator.info/>. A page like this would be added to any store and website so I felt it was appropriate to it it here.
+  - This page was created using this [generator](https://www.privacypolicygenerator.info/). A page like this would be added to any store and website so I felt it was appropriate to it it here.
 
 - Terms and Conditions page
 
-  - Like the policy page above, a page like this would be available on any store so I added it to this website. It was generated here: <https://www.termsandconditionsgenerator.com/>
+  - Like the policy page above, a page like this would be available on any store so I added it to this website. It was generated [here](https://www.termsandconditionsgenerator.com/).
 
 ### Comics App
 
@@ -161,7 +161,7 @@ IMAGE
 
 ### VSCode
 
-On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies and packages. You can download VSCode for your machine on Visual Studio Code's website here <https://code.visualstudio.com/docs/setup/setup-overview>. You can add extensions to help with your project. Use its source control tab to commit and push changes to your local repository.
+On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies and packages. You can download VSCode for your machine on [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)'s website. You can add extensions to help with your project. Use its source control tab to commit and push changes to your local repository.
 
 ### Django
 
@@ -181,7 +181,7 @@ Custom CSS and style attributes have been added via an external CSS stylesheet t
 
 ### JavaScript
 
-In this project JavaScript was used primarily for the Stripe set up, using an external stripe.js file which is the library that Stripe itself provides. It helps users on a store complete checkout and enables the developer to collect important and private payment information safely. More information on this can be found here <https://stripe.com/docs/stripe-js>. JavaScript was also copied from W3schools for the collapsible feature on the glossary page. And Bootstrap is dependent on JavaScript and its library, along with jQuery and Popper.js is added to the base.html page.
+In this project JavaScript was used primarily for the Stripe set up, using an external stripe.js file which is the library that Stripe itself provides. It helps users on a store complete checkout and enables the developer to collect important and private payment information safely. More information on this can be found on [Stripe](https://stripe.com/docs/stripe-js). JavaScript was also copied from W3schools for the collapsible feature on the glossary page. And Bootstrap is dependent on JavaScript and its library, along with jQuery and Popper.js is added to the base.html page.
 
 ### jQuery
 
@@ -237,7 +237,7 @@ This project was created, developed on run locally using a MacBook Air and VSCod
 
 Following this, create a virtual environment using Python3 -m venv env and then activate it by opening a new terminal on your IDE. Next, install Django by using pip3 install Django==1.11.28 - or another version of your choice. Then add your project folder - in my case it's 'mycomicjumble' - in order to access the Settings.py file and additional files for the project.
 
-Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then initialise git, add a commit message and then push everything to your online repository. For me, this is at Github - accessible here: <https://github.com/adonegan/milestone4-mycomicjumble>.
+Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then initialise git, add a commit message and then push everything to your online repository. For me, this is at Github - accessible [here](https://github.com/adonegan/milestone4-mycomicjumble).
 
 The project is now visible and accessible locally by using python3 manage.py runserver on your IDE. To exit the project, press Control-C, if using VSCode. Initialise the database and create tables within it by using python3 manage.py migrate. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp Home, for example) extend the base.html file to new pages.
 
@@ -257,10 +257,10 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 
 ## Credits
 
-- The text for the glossary page, in the Grades and Conditions sections, was copied from mycomicshop.com/help/grading <https://www.mycomicshop.com/help/grading> and modifed by me.
+- The text for the glossary page, in the Grades and Conditions sections, was copied from [My Comic Shop](https://www.mycomicshop.com/help/grading) and modifed by me.
 
-- The comic cover images were sourced on Marvels official website <marvel.com>, and Boom! Studio's official website <www.boom-studios.com>.
+- Comic cover images were sourced from: [Marvel](marvel.com)'s official website, [BOOM! Studio](www.boom-studios.com)'s official website, and [DC](https://www.dccomics.com/)'s website. Additional images and information were sourced from [Fandom](https://www.fandom.com/).
 
-- The text beside comics on each details page was copied from marvel.com (for all Marvel comics), from Boom! Studios and buffy.fandom.com/wiki (for Buffy and Angel comics).
+- The text for comics on each details page was copied aned edited from official publisher websites, as linked above, and Fandom.
 
-- Text on the Privacy Policy page was generated from <https://www.privacypolicygenerator.info/>. Likewise, text on the Terms & Conditions page is from <https://www.termsandconditionsgenerator.com/>.
+- Text on the [Privacy Policy](https://www.privacypolicygenerator.info/) page was generated from. Likewise, text on the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page is from.
