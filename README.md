@@ -21,59 +21,125 @@ This is a simple app where customers can browse, view, purchase and give feedbac
 
 ### Existing Features
 
-#### All pages
+#### Pages / Per App
 
-Navbar
+All html pages extend from the base.html page where the navbar and footer live. Template language is used which displays the navbar and footer and unique content is injected on each page by {% block content %} and {% endblock %} tags. Here's more on both prime features:
 
-- Every page features a navbar which signals where users can find each page or main feature. The navbar hosts the following links: Home, About, Comics, Search, Register and Login. The navbar also shows the site's name so it can be viewed on each page too. The navbar is reponsive and the links collapse on smaller screens, to be replaced by a hamburger menu icon.
+- Navbar. Every page features the navbar which signals where users can find each page. The navbar hosts the following links: Home, Comics, Search, Cart, Register and Login. The navbar also shows a shortened version of the site's name so it can be viewed on each page. The navbar is responsive and the links collapse on smaller screens, and are replaced by a hamburger menu icon.
 
-Footer
+- Footer. This is a simple section signalling the end of the website on the page. In this section, the user will find addition pages that can be accessed by clicking its link. It also includes the logo which displays bigger on smaller devices.
 
-- This is a simple section signalling the end of the website on the page. In this section, the user will find social icons and links to other sections of the site. It also includes...
+### Home App
 
-Both section features have been created on the base.html page and follow templating language. The area between both sections changes depending on the page it is extending to.
+- Home page
 
-Home Page
+  - The Home page displays a jumbotron and its main purpose is to highlight the mission of the website briefly. The container holding the jumbtron is one of a two elements that is set to 'fluid', meaning it fills the full width of the screen.
 
-- Jumbotron: this is the main text area that introduces users to the website, its mission and what users can find on the platform.
+  - Info cards: these Bootstrap cards give the user a taste of what they can find on the website; here they can see that there's a glossary, comic store, faqs page and a way to contact the site owner. They are unlinked, but animated.
 
-- Info cards: these colorful Bootstrap cards give the user a taste of what they can find on the website. They link to various places on the website.
+- About page
 
-About Page
+  - This page features a media element and brief text. Purely informational, this gives the user some detail about the purpose of the site and its owner.
 
-- This page features two images and two text boxes and gives more information to the user about the purpose of the site and its creator.
+- Contact page
 
-Comics Page
+  - This a page with minimal information and gives the user a way to contact the site owner. This page features a short form the user can fill in. The user can add their email subject, message and own email with the mesage and the email is sent to the site owner directly.
 
-- This page is the main product page and showcases all the comics that can be purchased on the app. With minimal information in mind, this page only showcases comic covers, name and price.
+- Glossary page
 
-- Pagination:
+  - This is a single page with a lot of textual information for the novice comic buyer. It gives information about why comics are graded in a certain way and gives more detail on what kind of conditions comics can be and what criteria is used.
 
-Details Page
+  - This information is displayed in JavaScript collapsible element from W3Schools. On hover the item is black in color, which gives users a chance to see which term is currently active. By clicking on the term item, a dropdown appears with a definition for that term. User close the dropdown by clicking again. Multiple terms can be viewed at the same time.
 
-- Once a visitor clicks on an item in the Comics Page they will be taken to that item's detail page. Here they can see a larger version of the comic and find out specific information about it, including: name, price, description, penciler, writer, cover artist, price, grade and condition.
+- FAQs page
 
-- Checkout button:
+  - This page gives the user more information on why the site owner started the website. It has a question and answer format for easy reading.
 
-Glossary Page
+- Privacy Policy page
 
-- A single page with information on the kind of terms used to talk about comics. This page is primarily for comic novices.
+  - This page was created using a generator, <https://www.privacypolicygenerator.info/>. A page like this would be added to any store and website so I felt it was appropriate to it it here.
 
-Register Page
+- Terms and Conditions page
 
--
+  - Like the policy page above, a page like this would be available on any store so I added it to this website. It was generated here: <https://www.termsandconditionsgenerator.com/>
 
-Login Page
+### Comics App
 
--
+- Comics page
 
-Search Page
+  - This is the page containing a list of all the products in the store, the comics. With style and information overload in mind, this page purposefully outlines the name, price and cover of the comic for sale. Additional information if provided in the Details page per comic.
 
-- Here users will find a search bar and button. Users type in a keyword and can retrieve information based on these keywords. Comic names and grade can be searched.
+  - With the cards, images are clickable and direct users to the Details page. There is also an Add to Cart button that adds the item to the customers cart and redirects them to the comics page.
 
-- Results are displayed immediately and are in the same form that can be found on the Comics page to keep uniformity - the comic cover, name and price. Clicking on a comic here will redirect the user to the details page of that specific item.
+  - Pagination has been added to this page in order to structure information and limit how much dislays on thage page. The customer will see nine comics on the comic page, and additional comics can be found by pressing the Next button at the end of the section.
+
+- Details Page
+
+  - Once a visitor clicks on a cover page displaying in the Comics page they will be taken to that item's detail page. Here they can see a larger version of the comic cover and find out specific information about the following: name, price, description, penciler, writer, cover artist, price, grade and condition of the comic.
+
+  - On reading this page, if the customer wants to purchase the comic, they can use the Add to Cart button to put the item in their cart. Doing this also redirects the customer to the Comics page again so they can browse other comics.
+
+  - Breadcrumbs feature at the top of the Details page. This acts as information for the customers on the comic they are viewing and is a way the customer can go back to the comics page or home page from the details page.
+
+- Search page
+
+  - On this page users can search for comics of their choice. They can enter text in the search bar and press the search button. Users can search for relevant comics by entering names, grades or publishers. For example, if the customer searches for Marvel comics, those comics will display.
+
+  - Results are displayed immediately and are in the same form that can be found on the Comics page to keep uniformity - the comic cover, name and price. However, the size of the comics is a little smaller, which is to differentiate between comics on the Comic page. Clicking on a comic cover here will also redirect the user to the details page of that specific comic.
+
+### Accounts App
+
+- Login page
+
+  - To proceed to checkout, users must login. Regular users can use this page to login and will find the page by clicking on the Login link in the navbar. Users log in by using their username and password. Once logged in, they are directed to the Index Page and see a succesful login message.
+
+  - If a user has forgotten their password, they can use use the reset password link below the form.
+
+- Register page
+
+  - Users can register for the website by using the form on this page. New users can register by adding their email address, desired username, password and the password must be confirmed. Then the user can press the register button.
+
+  - On registering, the new user will be redirected to the Index Page and will see a sucess message display under the navbar. If they are unsuccessful they will see a message explaining this.
+
+- Reset pages
+
+  - Outside the Accounts App, but relevant to this section, are the reset password pages. You can find these pages in a separate folder in the top level Templates folder.
+  
+  - Users can find the reset password route when they go through the Reset Form. There is a link to this form at the bottom of the Login page. When the user enters their email address, they receive a reset link to this address.
+
+  - When reset link is pressed, users are directed to a new form where they can change their password. Once completion of this, users then see the reset complete form prompting them to login using their new credentials.
+
+### Checkout App
+
+- Checkout page
+
+  - On the site, users can find the checkout page by clicking on the Checkout button on the Cart page. Users must be logged in to proceed to checkout and will be directed to do so if not logged in.
+
+  - At checkout, there are two forms: the order form and the payment form. Here users will add all relevant information in order to complete checkout.
+
+  - On successful completion at checkout, users will see a success message at the to top of the page and will be directed to the Comics page in case they want to purchase more items. If a user is unsuccessful, they will also see a message.
+
+### Cart App
+
+- Cart page
+
+  - This page can be accessed by clicking on the Cart link in the navbar, which is visible on every page. Users will see a brief explanation of the cart and the checkout button.
+
+  - If there are items in the cart, the user will see them display above the total. The items are smaller than displayed on the Comics page to differentiate between pages.
+
+  - When users click Add to Cart buttons throughout the site, a yellow badge appears beside the cart link and icon - users are not directed to the cart page unless they click the link in the navbar. This is so users can continue to browse. The badge helps the user see how many items are currently in the cart.
+
+  - Customers also have the option to remove the item from the cart when on the Cart page. This ensures users have more control over what they purchase and facilitates a change of mind.
 
 ### Features Left to Implement
+
+- Forum
+
+  - This would enable purchases of the comics to give feedback and chat to peers about the comics they've bought. It would also give the site owner a way to see where their comics have ended up. Additionally, once the comics are sold, the store would be disabled and the forum would take precedent.
+
+- Guest shopping
+
+  - For users who wanted to purchase comics but didn't want to sign up to the site, this feature would gives guests a way to do this.
 
 ## Information Architecture
 
