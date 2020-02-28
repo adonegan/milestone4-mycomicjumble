@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from accounts.forms import LoginForm, RegistrationForm
@@ -34,7 +34,12 @@ def login(request):
 
             if user:
                 auth.login(user=user, request=request)
-                return redirect(reverse('index'))
+
+                if request.GET and request.GET['next'] != '/?next=/checkout/':
+                    next = request.GET['next']
+                    return HttpResponseRedirect(next)
+                else:
+                    return redirect(reverse('index'))
             else:
                 login_form.add_error(
                     None, "Your username or password is not right")
