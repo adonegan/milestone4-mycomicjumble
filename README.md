@@ -1,7 +1,8 @@
 # My Comic Jumble
 
 [![Build Status](https://travis-ci.org/adonegan/milestone4-mycomicjumble.svg?branch=master)](https://travis-ci.org/adonegan/milestone4-mycomicjumble)
-My Comic Jumble is a small online store selling second-hand comic books. The owner of My Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of My Comic Jumble is to display, describe and sell second-hand comic lovers. This is a webapp created for **education purposes only**.
+
+My Comic Jumble is a small online store selling second-hand comic books. The owner of My Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of My Comic Jumble is to display, describe and sell second-hand comic lovers. This is a webapp created for **educational purposes only**.
 
 ## UX
 
@@ -20,8 +21,6 @@ This is a simple app where customers can browse, view, purchase and give feedbac
 ## Features
 
 ### Existing Features
-
-#### Pages / Per App
 
 All html pages extend from the base.html page where the navbar and footer live. Template language is used which displays the navbar and footer and unique content is injected on each page by {% block content %} and {% endblock %} tags. Here's more on both prime features:
 
