@@ -34,7 +34,7 @@
                     </a>
                     {% endif %}
 
-                    <h5 class="card-text text-center mx-auto mt-2">{{ comic.name }}</h5>
+                    <h5 class="card-text text-center mx-auto mt-2">{{ comic.name|truncatechars:20 }}</h5>
                     <p class="card-text text-center mx-auto">€{{ comic.price }}</p>
                 </div>
 
