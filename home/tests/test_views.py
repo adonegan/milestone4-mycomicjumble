@@ -17,11 +17,6 @@ class TestHomeViews(TestCase):
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "about.html")
 
-    def test_contact_is_rendered(self):
-        page = self.client.get("/contact/")
-        self.assertEqual(page.status_code, 200)
-        self.assertTemplateUsed(page, "contact.html")
-
     def test_faqs_is_rendered(self):
         page = self.client.get("/faqs/")
         self.assertEqual(page.status_code, 200)
