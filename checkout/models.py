@@ -2,6 +2,7 @@ from django.db import models
 from comics.models import Comic
 
 
+# Model for order information at checkout
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)

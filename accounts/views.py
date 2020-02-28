@@ -6,12 +6,22 @@ from accounts.forms import LoginForm, RegistrationForm
 
 @login_required
 def logout(request):
+    """
+    A message for successfully logging
+    out and redirect to Index page
+    """
     auth.logout(request)
     messages.success(request, "You are now logged out.")
     return redirect(reverse('index'))
 
 
 def login(request):
+    """
+    If login credentials are authenticated,
+    redirect to Index and how success messaeg.
+    If not, user is not authenticated and
+    show message with invalid username or password.
+    """
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == "POST":
@@ -34,6 +44,10 @@ def login(request):
 
 
 def register(request):
+    """
+    A view allowing users to register and shows
+    messages if form is completed successfully or not
+    """
     if request.user.is_authenticated:
         return redirect(reverse('index'))
 
@@ -60,5 +74,9 @@ def register(request):
 
 
 def user_profile(request):
+    """
+    A view for a profile - to be removed and
+    re-added at later date
+    """
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})

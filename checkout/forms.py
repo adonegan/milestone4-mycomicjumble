@@ -2,6 +2,7 @@ from django import forms
 from .models import Order
 
 
+# Order and Payment forms for checkout
 class PaymentForm(forms.Form):
 
     MONTH_RANGE = [(i, i) for i in range(1, 12)]

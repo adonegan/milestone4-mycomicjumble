@@ -4,6 +4,7 @@ from home.views import index, about_view, contact_view, glossary_view, privacy_v
 
 
 class TestHomeUrls(SimpleTestCase):
+    """Tests that all urls in Home app correspond to the correct view"""
 
     def test_index_view_url_is_resolved(self):
         url = reverse('index')

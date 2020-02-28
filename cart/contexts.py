@@ -3,6 +3,9 @@ from comics.models import Comic
 
 
 def cart_contents(request):
+    """
+    Get cart items, if multiple find total
+    """
     cart = request.session.get('cart', {})
 
     cart_items = []

@@ -3,6 +3,7 @@ from comics.models import Comic
 
 
 class ComicModelTest(TestCase):
+    """Tests string for comic names and primary key of details page"""
 
     def test_string_representation(self):
         comic = Comic(name="Spider-Man (2019) #1")

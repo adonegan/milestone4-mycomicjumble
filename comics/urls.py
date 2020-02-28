@@ -3,5 +3,5 @@ from .views import all_comics, detail
 
 urlpatterns = [
     url(r'^$', all_comics, name='comics'),
-    url(r'(?P<comic_id>\d+)/$', detail, name='detail')
+    url(r'(?P<comic_id>\d+)/$', detail, name='detail')  # Display specific item
 ]

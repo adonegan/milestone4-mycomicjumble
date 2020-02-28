@@ -3,6 +3,9 @@ from django.shortcuts import get_object_or_404
 
 
 class TestComicViews(TestCase):
+    """
+    Gets all pages in Comics app with page status of 200
+    """
 
     def test_get_comics_page(self):
         page = self.client.get("/comics/")

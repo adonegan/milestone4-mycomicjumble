@@ -1,5 +1,7 @@
 from django.db import models
 
+# Comic model with all information fields in database
+
 
 class Comic(models.Model):
     name = models.CharField(max_length=200)

@@ -5,6 +5,12 @@ from comics.models import Comic
 
 
 def do_search(request):
+    """
+    A view to search for comics. For results
+    paginate for more than 4 items per page.
+    Search by name, grade and brand - publisher
+    on customer facing side
+    """
     comics_list = Comic.objects.all()
     query = request.GET.get('q')
     if query:
