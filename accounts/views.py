@@ -18,9 +18,11 @@ def logout(request):
 def login(request):
     """
     If login credentials are authenticated,
-    redirect to Index and how success messaeg.
-    If not, user is not authenticated and
-    show message with invalid username or password.
+    redirect to Index and show success message.
+    If not, user is not authenticated and show
+    message with invalid username or password.
+    Customer needs to login to procced to checkout,
+    add 'next' page as checkout.
     """
     if request.user.is_authenticated:
         return redirect(reverse('index'))
