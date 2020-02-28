@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row my-3 mx-auto">
-        <h1 class="card-text"> Login </h1>
+        <h1 class="card-text">Login</h1>
     </div>
     <div class="row mx-auto">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -13,9 +13,11 @@
                     <p class="card-text">You must sign in to purchase the comics. If you don't already have an account, <a href="{% url 'register' %}">register here.</a></p>
                     {% csrf_token %} {{ login_form|crispy }}
                     <button type="submit" class="btn btn-danger">Login</button>
-                </div>
+                    <br>
+                    <br>
+                <p class="card-text">If you have forgotten your password, you can <a href="{% url 'password_reset' %}">reset your password.</a></p>
+            </div>
             </form>
-            <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
         </div>
     </div>
 </div>
