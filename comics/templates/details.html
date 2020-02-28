@@ -4,18 +4,20 @@
 
 <div class="container-fluid">
     <div class="row">
+        <!-- So users can go back to Comics page from Details page -->
         <nav aria-label="breadcrumb text-black">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item card-text"><a href="{% url 'index' %}">Home</a></li>
-              <li class="breadcrumb-item card-text"><a href="{% url 'comics' %}">Comics</a></li>
-              <li class="breadcrumb-item card-text" aria-current="page">{{ comic.name }}</li>
+                <li class="breadcrumb-item card-text"><a href="{% url 'index' %}">Home</a></li>
+                <li class="breadcrumb-item card-text"><a href="{% url 'comics' %}">Comics</a></li>
+                <li class="breadcrumb-item card-text" aria-current="page">{{ comic.name }}</li>
             </ol>
-          </nav>
+        </nav>
     </div>
 </div>
 
 <div class="container">
     <h1 class="card-text mt-0">Details</h1>
+    <!-- Gives reader more information about each individual comic -->
     <div class="row mx-auto">
         <div class="col-lg-8 col-md-7 col-sm-12">
             <h4 class="card-text"> {{ comic.name }}</h4>
@@ -34,7 +36,7 @@
             <h6 class="card-text"> <b>Grade:</b> {{ comic.grade }}</h6>
             <h6 class="card-text"> <b>Publisher:</b> {{ comic.brand }}</h6>
             <br>
-
+            <!-- Customer has the ability to add to cart from this page -->
             <form method="post" action="{% url 'add_to_cart' comic.id %}">
                 {% csrf_token %}
                 <div class="input-group card-text text-center">
@@ -45,6 +47,7 @@
             </form>
         </div>
 
+        <!-- If there's an image with this item, display it here-->
         <div class="col-lg-4 col-md-5 col-sm-12">
 
             {% if comic.image %}

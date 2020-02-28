@@ -24,6 +24,7 @@
 </div>
 
 <div class="container">
+    <!-- So customers can add information to their order and make payment -->
     <div class="row mx-auto outer-form">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
@@ -56,6 +57,7 @@
 
 <div class="container">
     <div class="row mx-auto">
+        <!-- After forms, customers see a summary of order -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h1 class="card-text text-center">Summary</h1>
             <p class="card-text text-center">Total: €{{ total }}</p>

@@ -10,6 +10,7 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <form method="POST">
                 <div class="outer-form">
+                    <!-- Explains login form with addition links to register or reset password forms if needed -->
                     <p class="card-text">You must sign in to purchase the comics. If you don't already have an account, <a href="{% url 'register' %}">register here.</a></p>
                     {% csrf_token %} {{ login_form|crispy }}
                     <button type="submit" class="btn btn-danger">Login</button>

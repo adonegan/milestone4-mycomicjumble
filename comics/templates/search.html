@@ -7,7 +7,7 @@
             <h1 class="card-text">Search</h1>
         </div>
     </div>
-
+    <!-- You can search for comics here. Search by name, publisher or grade -->
     <div class="row mx-auto">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <form method="GET">
@@ -26,6 +26,7 @@
 </div>
 
 <div class="container">
+    <!-- If comic matches search query, show here -->
     <div class="row mt-4 mb-5 mx-auto">
         {% for comic in comics %}
 
@@ -51,11 +52,12 @@
 
 <div class="container">
     <div class="row my-3 mx-auto">
-
+        <!-- If there's more than four comics as part of the search query, paginate with previous and next buttons -->
         <div class="pagination mx-auto mb-5">
             <span class="step-links">
                 {% if comics.has_previous %}
-                <a href="?page={{ comics.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="btn btn-primary">Previous</a>
+                <a href="?page={{ comics.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+                    class="btn btn-primary">Previous</a>
                 {% endif %}
 
                 <span class="current">
@@ -63,7 +65,8 @@
                 </span>
 
                 {% if comics.has_next %}
-                <a href="?page={{ comics.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="btn btn-primary">Next</a>
+                <a href="?page={{ comics.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
+                    class="btn btn-primary">Next</a>
                 {% endif %}
             </span>
         </div>

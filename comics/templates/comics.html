@@ -4,12 +4,13 @@
 
 <div class="container-fluid">
     <div class="row">
+        <!-- So users can go back to Home page from Comics page -->
         <nav aria-label="breadcrumb text-black">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item card-text"><a href="{% url 'index' %}">Home</a></li>
-              <li class="breadcrumb-item card-text" aria-current="page">Comics</a></li>
+                <li class="breadcrumb-item card-text"><a href="{% url 'index' %}">Home</a></li>
+                <li class="breadcrumb-item card-text" aria-current="page">Comics</a></li>
             </ol>
-          </nav>
+        </nav>
     </div>
 </div>
 
@@ -19,7 +20,7 @@
             <h1 class="card-text text-white">Comics</h1>
         </div>
     </div>
-
+    <!-- Display all comics added by administrator in the backend -->
     <div class="row mt-2 mb-4 mx-auto">
 
         {% for comic in comics %}
@@ -54,6 +55,7 @@
 </div>
 
 <div class="container">
+    <!-- After nine comics on page, paginate with previous and next buttons -->
     <div class="row my-3 mx-auto">
 
         {% for comic in comics %}
