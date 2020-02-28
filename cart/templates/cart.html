@@ -16,7 +16,7 @@
                     {% if item.comic.image %}
                     <img class="card-img-top" src="{{ MEDIA_URL }}{{ item.comic.image }}">
                     {% endif %}
-                    <h5 class="card-text text-center">{{ item.comic.name }}</h5>
+                    <h5 class="card-text text-center">{{ item.comic.name|truncatechars:12 }}</h5>
                     <p class="card-text text-center">€{{ item.comic.price }}</p>
                     <form method="post" action="{% url 'remove_from_cart' item.id %}">
                         {% csrf_token %}
