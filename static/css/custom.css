@@ -87,13 +87,13 @@ p.card-text {
 .outer-form {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  border: solid 1px black;
-  padding: 20px;
-  display: flex;
+  /*border: solid 1px black;*/
+  padding: 45px;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0b0b0d;
+  background-color: #0b0b0d;*/
   margin-bottom: 50px;
 }
 
@@ -105,6 +105,10 @@ p.card-text {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: #fff;
+}
+
+.text-muted {
+  color: blue;
 }
 
 #info-box { 
@@ -208,7 +212,7 @@ hr {
 }
 
 .collapsible {
-  background-color: #d9534f;
+  background-color: #dc3545;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -229,7 +233,7 @@ hr {
   overflow: hidden;
   text-align: center;
   transition: max-height 0.2s ease-out;
-  background-color: #fff5ee;
+  background-color: #fff;
 }
 
 h5.question {
@@ -265,3 +269,9 @@ label {
   margin-bottom: .5rem;
   color: white;
 }
+
+a {
+  color: #ffe75e;
+  text-decoration: none;
+  background-color: transparent;
+}  
