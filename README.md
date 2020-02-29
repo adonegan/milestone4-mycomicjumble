@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/adonegan/milestone4-mycomicjumble.svg?branch=master)](https://travis-ci.org/adonegan/milestone4-mycomicjumble)
 
-My Comic Jumble is a small online store selling second-hand comic books. The owner of My Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of My Comic Jumble is to display, describe and sell second-hand comic lovers. This is a webapp created for **educational purposes only**.
+Comic Jumble is a small online store selling second-hand comic books. The owner of Comic Jumble is selling comics from their own comic book collection because they want to downsize. The purpose of Comic Jumble is to display, describe and sell second-hand comic to comic lovers. This is a webapp created for **educational purposes only** - it is not an active store.
 
 ## UX
 
