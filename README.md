@@ -197,15 +197,15 @@ PostgreSQL
 
 ### VSCode
 
-On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies and packages. You can download VSCode for your machine on [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)'s website. You can add extensions to help with your project. Use its source control tab to commit and push changes to your local repository.
+On my local machine I used VSCode to add and edit my code. This enabled me to download my own necessary dependencies and packages. You can download VSCode for your machine on [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)'s website. You can add extensions to help with your project. Use its source control to commit and push changes to your local repository.
 
 ### Django
 
-This web application framework is used to create the entire app and is written in Python. It is installed via pip3 install django(ADD VERSION) through your code editor. Once you add your project using django-admin startproject PROJECTNAME (dot), then you'll have access to Settings.py, URLs.py and other files. Then you can add apps, which are smaller self-contained components within the project.
+This web application framework is used to create the entire app and is written in Python. It is installed via pip3 install django(ADD VERSION) through your code editor. Once you add your project using django-admin startproject PROJECTNAME (dot), then you'll have access to Settings.py, URLs.py and other files. Add apps, which are smaller self-contained components of the project.
 
 ### HTML5
 
-HTML is the standard markup for web pages and stands for Hyper Text Markup Language. It is used to add and maintain structure for the content of information on web pages on the app. In conjunction with Bootstrap's grid system, the HTML supports all content on the site. The base.html page is created first by declaring its HTML5 structure using <!DOCTYPE html> and then addition elements, including head, title and body elements.
+HTML is the standard markup for web pages and stands for Hyper Text Markup Language. It is used to add and maintain structure for the content of information on web pages on the app. In conjunction with Bootstrap's grid system, the HTML supports the structure of all content on the site. 
 
 ### Django's templating language
 
@@ -213,11 +213,11 @@ A template system is incorporated in this project. First, create your base.html 
 
 ### CSS3
 
-Custom CSS and style attributes have been added via an external CSS stylesheet that is added to the head of the base.html file - CSS is rendered on each page that extends from the base.html page. While the CSS sheet contains most code, other styling attributes have been added inline using style tags in the HTML structure and for Bootstrap's inline spacing and color specifications.
+Custom CSS and style attributes have been added via an external CSS stylesheet that is added to the head of the base.html file. CSS is rendered on each page that extends from the base.html page. While the CSS sheet contains most code, other styling attributes have been added inline using style tags in the HTML structure and for Bootstrap's inline spacing and color specifications.
 
 ### JavaScript
 
-In this project JavaScript was used primarily for the Stripe set up, using an external stripe.js file which is the library that Stripe itself provides. It helps users on a store complete checkout and enables the developer to collect important and private payment information safely. More information on this can be found on [Stripe](https://stripe.com/docs/stripe-js). JavaScript was also copied from W3schools for the collapsible feature on the glossary page. And Bootstrap is dependent on JavaScript and its library, along with jQuery and Popper.js is added to the base.html page.
+In this project JavaScript was used primarily for the Stripe set up, using an external stripe.js file which is the library that Stripe itself provides. It helps users on a store complete checkout and enables the developer to collect important and private payment information safely. More information on this can be found on [Stripe](https://stripe.com/docs/stripe-js). JavaScript was also used from W3schools for the collapsible feature on the glossary page. And Bootstrap is dependent on JavaScript and its library, along with jQuery and Popper.js - these are added to the base.html page.
 
 ### jQuery
 
@@ -225,19 +225,19 @@ This was used to make some Bootstrap elements functional. For example, the colla
 
 ### Bootstrap 4
 
-This technology aides in the development of information structure on the page. This service provides well-designed, structured containers that require little additional modification. Aside from components on the page, Bootstrap is also used for its grid layout, which enables my app to be responsive on all devices. Its emphasis on spacing by padding and margin on the x and y axis has been employed inline throughout the html code per page: mx-auto for margin-right and margin-left automatic spacing, for example.
+This technology aides in the development of information structure on the page. This service provides well-designed, structured containers that require little additional modification. Aside from components on the page, Bootstrap is also used for its grid layout, which enables my app to be responsive on all devices. Its emphasis on spacing by padding and margin on the x and y axis has been employed inline throughout the html code per page: mx-auto for margin-right and margin-left applied spacing, for example.
 
 ### Heroku
 
-This platform is used to build, run and deploy the project and is hosting my project in production. It hosts the database used in project too, PostgreSQL. You need to create an app, set config variables and then deploy. See Heroku Deployment for more indepth information.
+This platform is used to run and deploy the project and is hosting my project in production. It hosts the database used in the project, PostgreSQL. You need to create an app, set config variables and then deploy. See Heroku Deployment for more indepth information.
 
 ### SQLite3
 
-This database, by default, comes with the Django package and is used primarily in development. Tables within the database are created using modelsa and using python3 manage.py makemigration and then migrate. In production this set up is mirrored in the new PostreSQL database.
+This database, by default, comes with the Django package and is used primarily in development. Tables within the database are created using models and using python3 manage.py makemigration and then python3 manage.py migrate. In production this set up is mirrored in the new PostreSQL database.
 
 ### PostgreSQL
 
-This is the database used in production. It can be accessed as an add-on feature in Heroku at multiple pricing brackets, including a free tier. Go to the Resources tab and in the add-on section, type in PostgreSQL to see options. Initialise the database by python3 manage.py makemigrations and migrate.
+This is the database used in production. It can be accessed as an add-on feature in Heroku at multiple pricing brackets, including a free tier. Go to the Resources tab and in the add-on section, type in PostgreSQL to see options. Initialise the database by python3 manage.py makemigrations and python3 manage.py migrate.
 
 ### Github
 
@@ -249,7 +249,7 @@ This technology is generally used at the start of a project, during the Skeleton
 
 ### Travis
 
-This is a tool for continuous integration and testing. Its purpose is to test smaller chunks of code continously. After pushing changes to Github Travis will let you know if your code passes the requirements you've set. When Travis is synced up to Github repository you can see if your build passes or fails and then see your project's build history.
+This is a tool for continuous integration and testing. Its purpose is to test smaller chunks of code continously. After pushing changes to Github Travis will let you know if your code passes the requirements you've set. When Travis is synced up to Github repository you can see if your build passes or fails and see your project's build history.
 
 ### Google Fonts
 
@@ -257,7 +257,7 @@ The font used on the site is Quicksand with font weights of 400, 500 and 700 to 
 
 ### Code Institute
 
-Course material provided by Code Institute, including the e-commerce mini-project and deployment tutorials, were studied for this project.
+Course material provided by Code Institute, including the e-commerce mini-project and deployment tutorials, were studied for this project. Tutors and the Slack rooms were invaluable when troubleshooting.
 
 ### W3Schools
 
@@ -265,15 +265,15 @@ For Javascript code on the Glossary page and for assistance with formatting comm
 
 ### Validators
 
-W3C's [Markup Validator](https://validator.w3.org/) was used for HTML validation. W3C's [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. In addition to these validators, Pycodestyle (formerly known as pep8) was installed to my local machine and highlighed Python style code conventions.
+W3C's [Markup Validator](https://validator.w3.org/) was used for HTML validation. W3C's [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. In addition to these validators, Pycodestyle (formerly known as pep8) was installed to my local machine and highlighed Python style code conventions during the project.
 
 ### S3 Amazon Web Services
 
-Static files and media files were added to this platform for hosting. To set this up, create an account at [Amazon Management Console](https://aws.amazon.com/console/). Create a new bucket for your project, then click static website hosting. Add CORS configuation and bucket policy, set permissions to public. Create a new group and user with names associated with the project.
+Static files and media files were added to this platform for hosting. To set this up, create an account at [Amazon Management Console](https://aws.amazon.com/console/). Create a new bucket for your project, then click static website hosting. Add CORS configuation and a bucket policy, set permissions. Create a new group and user with names associated with the project. Here's how the set up looks in my Settings.py file:
 
 ![s3bucketconfig](media/images/s3bucketconfig.png)
 
-You'll need to set up a custom_storages.py file to set static and media file storage locations that are then pushed to S3. AWS secret and access keys will be accessible to your on creating a user on S3's side. Finally, ensure 'storages' is added to Installed APPs, and that you've used pip3 install Django-storages
+You'll need to set up a custom_storages.py file to set static and media file storage locations that are then pushed to S3. AWS secret and access keys will be accessible to you on creating a user on S3's side. Finally, ensure 'storages' is added to Installed Apps, and that you've used pip3 install Django-storages
 pip3 install boto3 in your requirements.txt file.
 
 When testing, to see changes on the site, of CSS for example, you'll need to use python3 manage.py collectstatic (add DISABLE_COLLECSTATIC = 1 to Heroku's config vars) to push changes to S3's side.
@@ -292,16 +292,16 @@ Then the first build takes place, which takes a few seconds as Travis tests all 
 
 1. Navbar: Go to the website on desktop and click each link in the navbar to be directed to relevant pages. On mobile or iPad, tap on the links via the hamburger menu icon.
 2. Informational boxes: On the Index page on desktop hover over this section to see the animation. On mobile and iPad, tap sections.
-3. Comics: Go to the Comics page and click on a cover image. You'll be taken to the details page of that comic. Click on Add to Cart and you'll find your item in your cart.
-4. Cart: In the cart, delete an item from the cart by clicking on the Remove button. You will stay on the cart page, but the item disappears.
-5. Logging in: Click the login link and fill in the form, you can now proceed to checkout and are logged in.
-6. Logging out. Only visible if logged in already. Click the Logout link in the navbar - redirect to index page and success message displays.
-7. Register form. Click the Register link in the navbar then fill out the form with your credentials. You will use those new credentials when logging in.
+3. Comics: Go to the Comics page and click on a cover image. You'll be taken to the details page of that comic. Click on Add to Cart and you'll find your item in your cart and a success badge display near cart icon.
+4. Cart: In the cart, delete an item by clicking on the Remove button. You will stay on the cart page, but the item disappears. Click checkout button to proceed to checkout - if logged in, you get to the page, if not, you'll be prompted to log in. If successful, you'll be taken directly to the checkout page.
+5. Logging in: Click the Login link and fill in the form, you can now proceed to checkout and are logged in.
+6. Logging out: Only visible if logged in already. Click the Logout link in the navbar - redirect to index page and success message displays.
+7. Register form: Click the Register link in the navbar then fill out the form with your credentials. You will use those new credentials when logging in.
 8. Password Reset: Click the forgot my password link, go to your email inbox and click reset link. Add and confirm new password. Login using new credentials.
 9. Search: Type in Marvel, DC or BOOM! Studios to find relevant comics. Search by name and grade too.
 10. Glossary: Hover over items to see item turn black, click on item to expand for more information. Click again to hide information.
 11. Click on the Contact link in the footer for mailto link option. From here send an email directly to Comic Jumble.
-12. Click links in the footer to take your to corresponding page. Links are highlighted in blue when clicked.
+12. Click links in the footer to take you to corresponding page. Links are highlighted in blue when clicked.
 
 ### Automated testing
 
@@ -309,13 +309,13 @@ Tests were written in this project and stored in Test folders in multiple apps. 
 
 To run tests, use python3 manage.py test (ADD APP NAME) on your local machine - ensure PostgreSQL database has been commented out in Env.py file so the tests use the testing database SQLite3. On doing this you'll see how long the tests take to run and an OK message.
 
-For writing tests, add separate test_views and test_urls files and always start each test class with 'def test' so the test can be picked up. Additionally, when adding new Test folders ensure an __init__.py file is added so the tests can found. There's more inforrmation on Django testing [here](https://docs.djangoproject.com/en/3.0/topics/testing/overview/).
+For writing tests, add separate test_views and test_urls files and always start each test class with 'def test' so the test can be picked up. Additionally, when adding new Test folders ensure an __init__.py file is added so the tests can found. There's more information on Django testing [here](https://docs.djangoproject.com/en/3.0/topics/testing/overview/).
 
 ### Issues and bugs
 
 |  Number  | Issue  |  Resolution  |  
 |---|---|---|
-|  1  | Users not directed to checkout after loggin in | Add 'next' = /?next=/checkout/ and if / else for users who are already or  not logged in |
+|  1  | Users not directed to checkout after logging in | Add 'next' = /?next=/checkout/ and if / else for users who are already or not logged in to login view |
 |  2  |  Too many comics on comics and search pages |  Add pagination class and logic to display nine comics per comics page, four per search  |
 |  3  |  Search queries by other criteria not possible |  Add logic so user can search by name, grade and publisher   |
 |  4  |  Gmail configuration for reset links not working | Use SendGrid instead   |
