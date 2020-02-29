@@ -170,19 +170,25 @@ All html pages extend from the base.html page where the navbar and footer live. 
 
 ## Information Architecture
 
-SQLite3
+### Data models
 
-- This database was used for testing purposes pre-deployment.
+- Comics model
+
+  - The Comic model is the main source of information given from the administator to the user. Here I added fields for information that comics lovers were likely to want to know, including name of comic and condition of comic. See all fields here:
+
+  ![comicmodel](media/images/comicmodel.png)
+
+- Order model
+
+  - This model is necessary for order and payment information to complete checkout by users of the site and is set with Stripe in mind to process orders.
+
+- SQLite3
+
+  - This database was used for testing purposes pre-deployment. It enabled me to set up automated testing when running the tests I had written for views and urls. For use post-deployment, ensure PostgreSQL database url if commented out in environment variables.
 
 PostgreSQL
 
-- On deployment, this database was used to host moels and store data.
-
-### Data models
-
-Comics app
-
-IMAGE
+- This database was added via an add-on on Heroku's side is the primary database for the site. When testing, use SQLite3 instead. This database was initialised by using python3 manage.py makemigrations and python3 manage.py migrate.
 
 ## Technologies Used
 
@@ -258,6 +264,17 @@ For Javascript code on the Glossary page and for assistance with formatting comm
 
 W3C's [Markup Validator](https://validator.w3.org/) was used for HTML validation. W3C's [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. In addition to these validators, Pycodestyle (formerly known as pep8) was installed to my local machine and highlighed Python style code conventions.
 
+### S3 Amazon Web Services
+
+Static files and media files were added to this platform for hosting. To set this up, create an account at [Amazon Management Console](https://aws.amazon.com/console/). Create a new bucket for your project, then click static website hosting. Add CORS configuation and bucket policy, set permissions to public. Create a new group and user with names associated with the project.
+
+![s3bucketconfig](media/images/s3bucketconfig.png)
+
+You'll need to set up a custom_storages.py file to set static and media file storage locations that are then pushed to S3. AWS secret and access keys will be accessible to your on creating a user on S3's side. Finally, ensure 'storages' is added to Installed APPs, and that you've used pip3 install Django-storages
+pip3 install boto3 in your requirements.txt file.
+
+When testing, to see changes on the site, of CSS for example, you'll need to use python3 manage.py collectstatic (add DISABLE_COLLECSTATIC = 1 to Heroku's config vars) to push changes to S3's side.
+
 ## Testing
 
 ### Continous Integration - Travis
@@ -290,6 +307,23 @@ Tests were written in this project and stored in Test folders in multiple apps. 
 To run tests, use python3 manage.py test (ADD APP NAME) on your local machine - ensure PostgreSQL database has been commented out in Env.py file so the tests use the testing database SQLite3. On doing this you'll see how long the tests take to run and an OK message.
 
 For writing tests, add separate test_views and test_urls files and always start each test class with 'def test' so the test can be picked up. Additionally, when adding new Test folders ensure an __init__.py file is added so the tests can found. There's more inforrmation on Django testing [here](https://docs.djangoproject.com/en/3.0/topics/testing/overview/).
+
+### Issues and bugs
+
+|  Number  | Issue  |  Resolution  |  
+|---|---|---|
+|  1  | Users not directed to checkout after loggin in | Add 'next' = /?next=/checkout/ and if / else for users who are already or  not logged in |
+|  2  |  Too many comics on comics and search pages |  Add pagination class and logic to display nine comics per comics page, four per search  |
+|  3  |  Search queries by other criteria not possible |  Add logic so user can search by name, grade and publisher   |
+|  4  |  Gmail configuration for reset links not working | Use SendGrid instead   |
+|  5  | Comic names can be too long  | Truncate name field by chars  |
+|  6  |  Logic behind contact form not working |  Use mailto link instead |
+|  7  |  Overcrowding on navbar |  Remove unnecessary icons and add additional pages as links in footer |
+|  8  |  Not being able to navigate out of details page |  Add breadcrumbs to top of comics and details pages so users can go back |
+|  9 | Bootstrap navbar menu icon limited color options  |  Remove Bootstrap icon and use Font Awesome icon instead |
+|  10  |  Whitespace displaying on right side of mobile | Use container > row > col divs together in that order  |
+
+Unresolved issue: footer on pages with less content, how to stay fixed to the bottom of the page on all viewports.
 
 ## Deployment
 
@@ -327,4 +361,10 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 
 - Text on the [Privacy Policy](https://www.privacypolicygenerator.info/) page was generated from. Likewise, text on the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page is from.
 
-Logo from Squarespace Logo
+- Logo from [Squarespace Logo](https://www.squarespace.com/logo#N4IghgrgLgFgpgExALigJwnAvkA).
+
+- Assistance with pagination from Rafiqul Hasan's documentation [here](http://shopnilsazal.github.io/django-pagination-with-basic-search/).
+
+- Anna G milestone four [documentation for House of Mouse](https://github.com/AJGreaves/thehouseofmouse) was an inspiration.
+
+- Images on About page and FAQs page sourced through Ecosia search engine.
