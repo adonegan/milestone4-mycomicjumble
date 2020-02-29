@@ -8,15 +8,22 @@ Comic Jumble is a small online store selling second-hand comic books. The owner 
 
 This is a simple app where customers can browse, view, purchase and give feedback on the product, a miscellaneous collection of comic books. The website is for comic book collectors and enthusiasts looking for specific issues of their favourite comics. As a user of this site I want / need / expect to:
 
-- Browse comics by category and name
+- Browse and search for comics by publisher, grade and name
 - Save comics to my cart and continue to browse
 - Use my credit card at checkout to purchase what I want
-- Give feedback or leave a note on what I think about the site and the collection of comics
-- Search for comics on the store by name and category
-- Click buttons to easily see comics by category
-- See how old the second-hand product item is
+- Get in touch with the site owner to share my feedback
+- See additional information about the comics, like a plot description
 - Find out the grade and condition of the issue I want to buy
-- Be able to register to the website and then login to my own account
+- Be able to register to the website and then use my own login credentials
+- Have the functionality to remove items from my cart if I change my mind
+- See the store's privacy policy and its terms and conditions
+- Get information on what each grade and condition means
+- Read more about the site owner and their purpose for the store
+- See cover art of the comics I want to buy
+- Have access to a frequently asked questions page
+- See how many items are in my cart at any given time
+- Add my order information and card details at checkout
+- See a summary of my cart items at checkout to refresh my memory
 
 ### Wireframes
 
