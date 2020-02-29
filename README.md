@@ -357,19 +357,12 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 ## Credits
 
 - The text for the Glossary page, in the Grades and Conditions sections, was copied from [My Comic Shop](https://www.mycomicshop.com/help/grading) and modifed by me.
-
 - Comic cover images were sourced from: [Marvel](https://marvel.com)'s official website, [BOOM! Studio](https://www.boom-studios.com)'s official website, and [DC](https://www.dccomics.com/)'s website. Additional images and information were sourced from [Fandom](https://www.fandom.com/).
-
 - The text for comics on each details page was copied and edited from official publisher websites, as linked above, and Fandom.
-
 - Generated text for the [Privacy Policy](https://www.privacypolicygenerator.info/) page and the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page.
-
 - Logo from [Squarespace Logo](https://www.squarespace.com/logo#N4IghgrgLgFgpgExALigJwnAvkA).
-
 - Assistance with pagination from Rafiqul Hasan's documentation [here](http://shopnilsazal.github.io/django-pagination-with-basic-search/).
-
 - Anna G milestone four [documentation for House of Mouse](https://github.com/AJGreaves/thehouseofmouse) was an inspiration.
-
 - Images on About page and FAQs page sourced through Ecosia search engine.
 
 ## Acknowledgments
