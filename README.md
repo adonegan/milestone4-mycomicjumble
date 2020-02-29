@@ -45,11 +45,11 @@ About wireframe
 
 ### Existing Features
 
-All html pages extend from the base.html page where the navbar and footer live. Template language is used which displays the navbar and footer and unique content is injected on each page by {% block content %} and {% endblock %} tags. Here's more on both prime features:
+All html pages extend from the base.html page where the navbar and footer live - these features appear on all pages. Unique content displays on each page by {% block content %} and {% endblock %} tags. Here's more on both prime features:
 
-- Navbar. Every page features the navbar which signals where users can find each page. The navbar hosts the following links: Home, Comics, Search, Cart, Register and Login. The navbar also shows a shortened version of the site's name so it can be viewed on each page. The navbar is responsive and the links collapse on smaller screens, and are replaced by a hamburger menu icon.
+- Navbar: Every page features the navbar which signals where users can find each page. The navbar hosts the following links: Home, Comics, Search, Cart, Register and Login. The navbar also shows a shortened version of the site's name so it can be viewed on each page. The navbar is responsive and the links collapse on smaller screens, and are replaced by a hamburger menu icon.
 
-- Footer. This is a simple section signalling the end of the website on the page. In this section, the user will find addition pages that can be accessed by clicking its link. It also includes the logo which displays bigger on smaller devices.
+- Footer: This is a simple section signalling the end of the website on the page. In this section, the user will find additional pages that can be accessed by clicking the links. It also includes the logo which displays bigger on smaller devices.
 
 ### Home App
 
