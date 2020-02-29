@@ -187,11 +187,11 @@ All html pages extend from the base.html page where the navbar and footer live -
 
 - SQLite3
 
-  - This database was used for testing purposes pre-deployment. It enabled me to set up automated testing when running the tests I had written for views and urls. For use post-deployment, ensure PostgreSQL database url if commented out in environment variables.
+  - This database was used for testing purposes pre-deployment. It enabled me to set up automated testing when running the tests I had written for views and urls. For use post-deployment, ensure PostgreSQL database url is commented out in environment variables.
 
 PostgreSQL
 
-- This database was added via an add-on on Heroku's side is the primary database for the site. When testing, use SQLite3 instead. This database was initialised by using python3 manage.py makemigrations and python3 manage.py migrate.
+- This database was added via an add-on on Heroku's side and is the primary database for the site. This database was initialised by using python3 manage.py makemigrations and python3 manage.py migrate. When testing, use SQLite3 instead.
 
 ## Technologies Used
 
