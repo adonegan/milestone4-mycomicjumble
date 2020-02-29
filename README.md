@@ -1,4 +1,4 @@
-# My Comic Jumble
+# Comic Jumble
 
 [![Build Status](https://travis-ci.org/adonegan/milestone4-mycomicjumble.svg?branch=master)](https://travis-ci.org/adonegan/milestone4-mycomicjumble)
 
