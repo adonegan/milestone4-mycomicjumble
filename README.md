@@ -153,23 +153,23 @@ All html pages extend from the base.html page where the navbar and footer live -
 
 - Forum
 
-  - This would enable purchases of the comics to give feedback and chat to peers about the comics they've bought. It would also give the site owner a way to see where their comics have ended up. Additionally, once the comics are sold, the store would be disabled and the forum would take precedent.
+  - This would enable purchasers of the comics to give feedback and chat to peers about the comics they've bought. It would also give the site owner a way to see where their comics have ended up. Additionally, once the comics are sold, the store would be disabled and the forum would take precedence.
 
 - Guest shopping
 
-  - For users who want to purchase comics but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to login.
+  - For users who want to purchase comics but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to log in.
 
 - Contact Form
 
-  - Instead of users having to email in via the mailto link in the footer, users would be able to access a form on the site, which they would fill in. Once they hit send, the email would be sent directly to the store's owner.
+  - Instead of users having to email in via the mailto link in the footer, they would be able to access a form on the site, which they would fill in. Once they hit send, the email would be sent directly to the store's owner.
 
 - Social links
 
-  - Twitter, Facebook, YouTube and Instagram icons were removed at final stage of project because the store does not have any social accounts and it would be a bad user experience to keep them linked with no destination. Once the site owner has social accounts to link to, they will be re-added in the footer section.
+  - Twitter, Facebook, YouTube and Instagram icons were removed in the final stages of the project because the store does not have any social accounts and it would be a bad user experience to keep them linked with no destination. Once the site owner has social accounts to link to, they will be re-added in the footer section.
 
 - Profile page
 
-  - Once logging in the user would be directed to their own Profile page. It would be personalised for them and information including comic favourites, past orders and the ability to edit personal information would be available to the user.
+  - On logging in the user would be directed to their own Profile page. It would be personalised for them and information including comic favourites, past orders and the ability to edit personal information would be available to the user.
 
 ## Information Architecture
 
