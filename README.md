@@ -205,7 +205,7 @@ This web application framework is used to create the entire app and is written i
 
 ### HTML5
 
-HTML is the standard markup for web pages and stands for Hyper Text Markup Language. It is used to add and maintain structure for the content of information on web pages on the app. In conjunction with Bootstrap's grid system, the HTML supports the structure of all content on the site. 
+HTML is the standard markup for web pages and stands for Hyper Text Markup Language. It is used to add and maintain structure for the content of information on web pages on the app. In conjunction with Bootstrap's grid system, the HTML supports the structure of all content on the site.
 
 ### Django's templating language
 
@@ -332,13 +332,13 @@ Unresolved issue: footer on pages with less content, how to stay fixed to the bo
 
 ### Running the project locally
 
-This project was created, developed on run locally using a MacBook Air and VSCode as an IDE. To start the project, first create a workspace on your local machine and then open the folder on VSCode or an IDE of your choice. Add the README.md file as the first file and then create a .gitignore file in anticipation for the files that would need to be ignored for the project.
+This project was created, developed and run locally using a MacBook Air and VSCode as a code editor. To start the project, first create a workspace on your local machine and then open the folder on VSCode or a code editor of your choice. Add the README.md file as the first file and then create a .gitignore file in anticipation for the files that would need to be ignored for the project.
 
-Following this, create a virtual environment using Python3 -m venv env and then activate it by opening a new terminal on your IDE. Next, install Django by using pip3 install Django==1.11.28 - or another version of your choice. Then add your project folder - in my case it's 'mycomicjumble' - in order to access the Settings.py file and additional files for the project.
+Following this, create a virtual environment using Python3 -m venv env and then activate it by opening a new terminal on your code editor. Next, install Django by using pip3 install Django==1.11.28 - or another version of your choice. Then add your project folder - in my case it's 'mycomicjumble' - in order to access the Settings.py file and additional files for the project.
 
 Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. Then initialise git, add a commit message and then push everything to your online repository. For me, this is at Github - accessible [here](https://github.com/adonegan/milestone4-mycomicjumble).
 
-The project is now visible and accessible locally by using python3 manage.py runserver on your IDE. To exit the project, press Control-C, if using VSCode. Initialise the database and create tables within it by using python3 manage.py migrate. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp Home, for example) extend the base.html file to new pages.
+The project is now visible and accessible locally by using python3 manage.py runserver in your terminal. To exit the project, press Control-C, if using VSCode. Initialise the database and create tables within it by using python3 manage.py makemigrations and then python3 manage.py migrate. Create your superuser. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp Home, for example) extend the base.html file to new pages.
 
 ### Heroku Deployment
 
@@ -348,7 +348,7 @@ To deploy, create an app in your Heroku account. In the resources tab you can op
 
 Locally, use pip3 to install dj-database-url to your project - this is so the PostgreSQL database can be supported. In the Settings.py file comment out the SQLite database that comes with Django in favour of using Heroku's PostgreSQL database. Use this code: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} and import dj_database_url at the top of the Settings.py file. In addition to this, insall psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
 
-Add all keys and urls in the env.py file to the config vars section of the Settings tab within Heroku so they can be supported there. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the database. Then create a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because PostgreSQL is the new database.
+Add all keys and urls in the env.py file to the config vars section of the Settings tab within Heroku so they can be supported there. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the new database. Then create a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because PostgreSQL is the new database.
 
 Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that is set up, use pip3 freeze --local > requirements.txt to ensure all dependencies are in place. After this, create the Procfile, which is needed for Heroku to determine what type of app it is (web: gunicorn mycomicjumble.wsgi:application is mine, for example).
 
@@ -356,13 +356,13 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 
 ## Credits
 
-- The text for the glossary page, in the Grades and Conditions sections, was copied from [My Comic Shop](https://www.mycomicshop.com/help/grading) and modifed by me.
+- The text for the Glossary page, in the Grades and Conditions sections, was copied from [My Comic Shop](https://www.mycomicshop.com/help/grading) and modifed by me.
 
 - Comic cover images were sourced from: [Marvel](marvel.com)'s official website, [BOOM! Studio](www.boom-studios.com)'s official website, and [DC](https://www.dccomics.com/)'s website. Additional images and information were sourced from [Fandom](https://www.fandom.com/).
 
-- The text for comics on each details page was copied aned edited from official publisher websites, as linked above, and Fandom.
+- The text for comics on each details page was copied and edited from official publisher websites, as linked above, and Fandom.
 
-- Text on the [Privacy Policy](https://www.privacypolicygenerator.info/) page was generated from. Likewise, text on the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page is from.
+- Generated text for the [Privacy Policy](https://www.privacypolicygenerator.info/) page and the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page.
 
 - Logo from [Squarespace Logo](https://www.squarespace.com/logo#N4IghgrgLgFgpgExALigJwnAvkA).
 
@@ -371,3 +371,7 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 - Anna G milestone four [documentation for House of Mouse](https://github.com/AJGreaves/thehouseofmouse) was an inspiration.
 
 - Images on About page and FAQs page sourced through Ecosia search engine.
+
+## Acknowledgments
+
+Thanks to mentor Guido Cecilio for all his help on this project - invaluable!
