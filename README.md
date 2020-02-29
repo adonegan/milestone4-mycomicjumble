@@ -18,6 +18,22 @@ This is a simple app where customers can browse, view, purchase and give feedbac
 - Find out the grade and condition of the issue I want to buy
 - Be able to register to the website and then login to my own account
 
+### Wireframes
+
+These wireframes below, of the Home page, Search page and About page, are the first representations of Comic Jumble. As can be seen, the Search page has stayed the same throughout the project.
+
+Home wireframe
+
+![Homewireframe](media/images/homewireframe.png)
+
+Search wireframe
+
+![Searchwireframe](media/images/searchwireframe.png)
+
+About wireframe
+
+![Aboutwireframe](media/images/aboutwireframe.png)
+
 ## Features
 
 ### Existing Features
@@ -138,7 +154,19 @@ All html pages extend from the base.html page where the navbar and footer live. 
 
 - Guest shopping
 
-  - For users who wanted to purchase comics but didn't want to sign up to the site, this feature would gives guests a way to do this.
+  - For users who want to purchase comics but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to login.
+
+- Contact Form
+
+  - Instead of users having to email in via the mailto link in the footer, users would be able to access a form on the site, which they would fill in. Once they hit send, the email would be sent directly to the store's owner.
+
+- Social links
+
+  - Twitter, Facebook, YouTube and Instagram icons were removed at final stage of project because the store does not have any social accounts and it would be a bad user experience to keep them linked with no destination. Once the site owner has social accounts to link to, they will be re-added in the footer section.
+
+- Profile page
+
+  - Once logging in the user would be directed to their own Profile page. It would be personalised for them and information including comic favourites, past orders and the ability to edit personal information would be available to the user.
 
 ## Information Architecture
 
@@ -263,3 +291,5 @@ When the Heroku app url is generated, add it - via an environment variable - to 
 - The text for comics on each details page was copied aned edited from official publisher websites, as linked above, and Fandom.
 
 - Text on the [Privacy Policy](https://www.privacypolicygenerator.info/) page was generated from. Likewise, text on the [Terms & Conditions](https://www.termsandconditionsgenerator.com/) page is from.
+
+Logo from Squarespace Logo
