@@ -246,6 +246,18 @@ This is a tool for continuous integration and testing. Its purpose is to test sm
 
 The font used on the site is Quicksand with font weights of 400, 500 and 700 to differentiate between different types of text - paragraph, heading and special text, for example. While it is possible to add additional weights and styles of this font, I used minimal specifications to keep my site loading quickly.
 
+### Code Institute
+
+Course material provided by Code Institute, including the e-commerce mini-project and deployment tutorials, were studied for this project.
+
+### W3Schools
+
+For Javascript code on the Glossary page and for assistance with formatting comments for HTML, CSS and Python.
+
+### Validators
+
+W3C's [Markup Validator](https://validator.w3.org/) was used for HTML validation. W3C's [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. In addition to these validators, Pycodestyle (formerly known as pep8) was installed to my local machine and highlighed Python style code conventions.
+
 ## Testing
 
 ### Continous Integration - Travis
@@ -255,6 +267,29 @@ From the beginning of this project, Continuous Integration - which means to test
 ![travis](/media/images/travis.png)
 
 Then the first build takes place, which takes a few seconds as Travis tests all the code submitted. A build icon can be placed at the top of your README.md file, which is used to keep track of passing or failing code. When you click on the build icon you'll be redirected to the Travis website to see the build's code history.
+
+### Manual testing by feature
+
+1. Navbar: Go to the website on desktop and click each link in the navbar to be directed to relevant pages. On mobile or iPad, tap on the links via the hamburger menu icon.
+2. Informational boxes: On the Index page on desktop hover over this section to see the animation. On mobile and iPad, tap sections.
+3. Comics: Go to the Comics page and click on a cover image. You'll be taken to the details page of that comic. Click on Add to Cart and you'll find your item in your cart.
+4. Cart: In the cart, delete an item from the cart by clicking on the Remove button. You will stay on the cart page, but the item disappears.
+5. Logging in: Click the login link and fill in the form, you can now proceed to checkout and are logged in.
+6. Logging out. Only visible if logged in already. Click the Logout link in the navbar - redirect to index page and success message displays.
+7. Register form. Click the Register link in the navbar then fill out the form with your credentials. You will use those new credentials when logging in.
+8. Password Reset: Click the forgot my password link, go to your email inbox and click reset link. Add and confirm new password. Login using new credentials.
+9. Search: Type in Marvel, DC or BOOM! Studios to find relevant comics. Search by name and grade too.
+10. Glossary: Hover over items to see item turn black, click on item to expand for more information. Click again to hide information.
+11. Click on the Contact link in the footer for mailto link option. From here send an email directly to Comic Jumble.
+12. Click links in the footer to take your to corresponding page. Links are highlighted in blue when clicked.
+
+### Automated testing
+
+Tests were written in this project and stored in Test folders in multiple apps. There are 21 automated tests overall and they are designed to test that views display with page status 200 and urls link to correct views.
+
+To run tests, use python3 manage.py test (ADD APP NAME) on your local machine - ensure PostgreSQL database has been commented out in Env.py file so the tests use the testing database SQLite3. On doing this you'll see how long the tests take to run and an OK message.
+
+For writing tests, add separate test_views and test_urls files and always start each test class with 'def test' so the test can be picked up. Additionally, when adding new Test folders ensure an __init__.py file is added so the tests can found. There's more inforrmation on Django testing [here](https://docs.djangoproject.com/en/3.0/topics/testing/overview/).
 
 ## Deployment
 
